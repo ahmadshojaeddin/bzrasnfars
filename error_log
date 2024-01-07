@@ -1,0 +1,735 @@
+[25-Nov-2023 09:57:48 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::fetch_assoc() in /home/bzrasnfa/public_html/php/home/content.php:25
+Stack trace:
+#0 /home/bzrasnfa/public_html/index.php(15): include_once()
+#1 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 25
+[25-Nov-2023 09:59:45 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::fetch_assoc() in /home/bzrasnfa/public_html/php/home/content.php:25
+Stack trace:
+#0 /home/bzrasnfa/public_html/index.php(15): include_once()
+#1 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 25
+[25-Nov-2023 09:59:51 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method PDOStatement::fetch_assoc() in /home/bzrasnfa/public_html/php/home/content.php:25
+Stack trace:
+#0 /home/bzrasnfa/public_html/index.php(15): include_once()
+#1 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 25
+[25-Nov-2023 10:13:15 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 17
+[25-Nov-2023 10:13:15 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:24
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(24): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 24
+[25-Nov-2023 10:16:31 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:16:31 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:25
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(25): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 25
+[25-Nov-2023 10:16:53 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:16:53 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:25
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(25): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 25
+[25-Nov-2023 10:17:05 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:17:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:25
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(25): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 25
+[25-Nov-2023 10:18:19 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:18:19 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:18:28 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:18:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:18:33 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:18:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:18:34 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:18:34 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:18:35 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:18:35 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:18:35 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:18:35 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:18:39 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:18:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:19:25 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:19:25 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:19:28 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:19:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:20:45 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:20:45 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:21:20 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:21:20 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:21:34 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:21:34 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:21:48 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:21:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:22:17 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:22:17 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:22:57 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:22:57 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:28
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(28): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 28
+[25-Nov-2023 10:24:55 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:24:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT id, firs...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:25:12 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:25:12 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT * FROM u...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:25:16 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:25:16 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT * FROM u...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:25:30 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:25:30 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:28
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(28): mysqli->query('SELECT * FROM u...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 28
+[25-Nov-2023 10:25:35 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:25:35 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT * FROM u...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:26:28 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:26:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''users'' at line 1 in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT * FROM '...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:26:29 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:26:29 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''users'' at line 1 in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT * FROM '...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:26:30 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:26:30 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''users'' at line 1 in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT * FROM '...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:26:30 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:26:30 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''users'' at line 1 in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT * FROM '...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:26:33 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:26:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''users'' at line 1 in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT * FROM '...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:26:33 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:26:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''users'' at line 1 in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT * FROM '...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:27:08 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:27:08 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''bzrasnfa_db.users'' at line 1 in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT * FROM '...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:27:08 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:27:08 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''bzrasnfa_db.users'' at line 1 in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT * FROM '...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:27:09 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:27:09 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''bzrasnfa_db.users'' at line 1 in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT * FROM '...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:27:09 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 18
+[25-Nov-2023 10:27:09 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ''bzrasnfa_db.users'' at line 1 in /home/bzrasnfa/public_html/php/home/content.php:27
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(27): mysqli->query('SELECT * FROM '...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 27
+[25-Nov-2023 10:38:24 UTC] PHP Warning:  Undefined variable $dbname in /home/bzrasnfa/public_html/php/home/content.php on line 20
+[25-Nov-2023 10:38:24 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: No database selected in /home/bzrasnfa/public_html/php/home/content.php:29
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/home/content.php(29): mysqli->query('SELECT * FROM u...')
+#1 /home/bzrasnfa/public_html/index.php(15): include_once('/home/bzrasnfa/...')
+#2 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 29
+[25-Nov-2023 10:51:39 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + int in /home/bzrasnfa/public_html/php/home/content.php:36
+Stack trace:
+#0 /home/bzrasnfa/public_html/index.php(15): include_once()
+#1 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 36
+[25-Nov-2023 10:56:04 UTC] PHP Warning:  Undefined variable $mysqli in /home/bzrasnfa/public_html/php/home/content.php on line 19
+[25-Nov-2023 10:56:04 UTC] PHP Fatal error:  Uncaught Error: Call to a member function set_charset() on null in /home/bzrasnfa/public_html/php/home/content.php:19
+Stack trace:
+#0 /home/bzrasnfa/public_html/index.php(15): include_once()
+#1 {main}
+  thrown in /home/bzrasnfa/public_html/php/home/content.php on line 19
+[28-Nov-2023 07:10:56 UTC] PHP Warning:  include_once(php/home/content.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/index.php on line 15
+[28-Nov-2023 07:10:56 UTC] PHP Warning:  include_once(): Failed opening 'php/home/content.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/index.php on line 15
+[28-Nov-2023 07:11:51 UTC] PHP Warning:  include_once(../home/test_mysql.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/content.php on line 8
+[28-Nov-2023 07:11:51 UTC] PHP Warning:  include_once(): Failed opening '../home/test_mysql.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/php/content.php on line 8
+[28-Nov-2023 09:20:05 UTC] PHP Warning:  include_once(home/login.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/content.php on line 5
+[28-Nov-2023 09:20:05 UTC] PHP Warning:  include_once(): Failed opening 'home/login.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/php/content.php on line 5
+[30-Dec-2023 06:03:10 UTC] PHP Warning:  Undefined variable $GET in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:03:10 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:03:17 UTC] PHP Warning:  Undefined variable $GET in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:03:17 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:03:52 UTC] PHP Warning:  Undefined variable $GET in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:03:52 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:03:52 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + null in /home/bzrasnfa/public_html/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:03:56 UTC] PHP Warning:  Undefined variable $GET in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:03:56 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:03:56 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + null in /home/bzrasnfa/public_html/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:00 UTC] PHP Warning:  Undefined variable $GET in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:00 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:00 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + null in /home/bzrasnfa/public_html/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:02 UTC] PHP Warning:  Undefined variable $GET in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:02 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:02 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + null in /home/bzrasnfa/public_html/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:12 UTC] PHP Warning:  Undefined variable $GET in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:12 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:12 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + null in /home/bzrasnfa/public_html/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:16 UTC] PHP Warning:  Undefined variable $GET in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:16 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:16 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + null in /home/bzrasnfa/public_html/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:19 UTC] PHP Warning:  Undefined variable $GET in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:19 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:19 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + null in /home/bzrasnfa/public_html/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:46 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:46 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + null in /home/bzrasnfa/public_html/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:48 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:48 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + null in /home/bzrasnfa/public_html/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:49 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:04:49 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + null in /home/bzrasnfa/public_html/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:05:18 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:05:27 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:11:33 UTC] PHP Warning:  include_once(/php/home/home.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/index.php on line 22
+[30-Dec-2023 06:11:33 UTC] PHP Warning:  include_once(): Failed opening '/php/home/home.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/index.php on line 22
+[30-Dec-2023 06:11:40 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 16
+[30-Dec-2023 06:11:40 UTC] PHP Warning:  include_once(/php/home/home.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/index.php on line 22
+[30-Dec-2023 06:11:40 UTC] PHP Warning:  include_once(): Failed opening '/php/home/home.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/index.php on line 22
+[30-Dec-2023 06:11:50 UTC] PHP Warning:  include_once(/php/timex/timex.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/index.php on line 19
+[30-Dec-2023 06:11:50 UTC] PHP Warning:  include_once(): Failed opening '/php/timex/timex.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/index.php on line 19
+[30-Dec-2023 06:12:14 UTC] PHP Warning:  include_once(/php/navbar.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:12:14 UTC] PHP Warning:  include_once(): Failed opening '/php/navbar.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/index.php on line 15
+[30-Dec-2023 06:12:14 UTC] PHP Warning:  include_once(/php/timex/timex.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/index.php on line 19
+[30-Dec-2023 06:12:14 UTC] PHP Warning:  include_once(): Failed opening '/php/timex/timex.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/index.php on line 19
+[30-Dec-2023 06:12:14 UTC] PHP Warning:  include_once(/php/footer.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/index.php on line 24
+[30-Dec-2023 06:12:14 UTC] PHP Warning:  include_once(): Failed opening '/php/footer.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/index.php on line 24
+[30-Dec-2023 06:13:35 UTC] PHP Warning:  require_once(/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/index.php on line 5
+[30-Dec-2023 06:13:35 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/index.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/index.php on line 5
+[30-Dec-2023 06:13:36 UTC] PHP Warning:  require_once(/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/index.php on line 5
+[30-Dec-2023 06:13:36 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/index.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/index.php on line 5
+[30-Dec-2023 06:13:57 UTC] PHP Warning:  require_once(/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/index.php on line 5
+[30-Dec-2023 06:13:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/index.php:5
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/index.php on line 5
+[30-Dec-2023 06:14:02 UTC] PHP Warning:  include_once(/php/navbar.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/index.php on line 16
+[30-Dec-2023 06:14:02 UTC] PHP Warning:  include_once(): Failed opening '/php/navbar.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/index.php on line 16
+[30-Dec-2023 06:14:02 UTC] PHP Warning:  include_once(/php/timex/timex.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/index.php on line 21
+[30-Dec-2023 06:14:02 UTC] PHP Warning:  include_once(): Failed opening '/php/timex/timex.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/index.php on line 21
+[30-Dec-2023 06:14:02 UTC] PHP Warning:  include_once(/php/footer.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/index.php on line 27
+[30-Dec-2023 06:14:02 UTC] PHP Warning:  include_once(): Failed opening '/php/footer.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/index.php on line 27
+[30-Dec-2023 06:14:26 UTC] PHP Warning:  require_once(../head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/timex/timex.php on line 5
+[30-Dec-2023 06:14:26 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/php/timex/timex.php:5
+Stack trace:
+#0 /home/bzrasnfa/public_html/index.php(21): include_once()
+#1 {main}
+  thrown in /home/bzrasnfa/public_html/php/timex/timex.php on line 5
+[30-Dec-2023 06:14:45 UTC] PHP Warning:  require_once(../head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/timex/timex.php on line 5
+[30-Dec-2023 06:14:45 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/php/timex/timex.php:5
+Stack trace:
+#0 /home/bzrasnfa/public_html/index.php(21): include_once()
+#1 {main}
+  thrown in /home/bzrasnfa/public_html/php/timex/timex.php on line 5
+[30-Dec-2023 06:15:57 UTC] PHP Warning:  require_once(../head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/timex/timex.php on line 5
+[30-Dec-2023 06:15:57 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '../head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/php/timex/timex.php:5
+Stack trace:
+#0 /home/bzrasnfa/public_html/index.php(21): include_once()
+#1 {main}
+  thrown in /home/bzrasnfa/public_html/php/timex/timex.php on line 5
+[30-Dec-2023 06:19:42 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:19:44 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:19:50 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:21:15 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:21:21 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:23:25 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:23:29 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:45:22 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:45:40 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:45:43 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:45:46 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:46:12 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:46:21 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:46:24 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:46:27 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:46:33 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:46:35 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:46:38 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:46:41 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:46:53 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:48:12 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:48:18 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:48:20 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:48:25 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:48:27 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 06:51:18 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 17
+[30-Dec-2023 07:06:39 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:06:48 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:07:00 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:07:03 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:07:17 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:07:31 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:08:12 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:08:50 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:09:02 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:09:06 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:09:21 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:09:36 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:09:39 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:10:49 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:11:50 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:12:31 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:12:49 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:12:53 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:12:55 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:13:30 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:14:16 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:16:43 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:19:09 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:19:53 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 07:19:53 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 07:19:53 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 07:19:53 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[30-Dec-2023 07:20:01 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:20:04 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 07:20:04 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 07:20:04 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 07:20:04 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[30-Dec-2023 07:21:36 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:21:40 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 07:21:40 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 07:21:40 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 07:21:40 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[30-Dec-2023 07:22:09 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:22:14 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 07:22:14 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 07:22:14 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 07:22:14 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[30-Dec-2023 07:22:28 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:43:07 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:43:14 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:43:16 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:43:19 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:43:19 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:43:19 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:44:02 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:56:11 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:56:11 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 07:56:11 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 08:38:13 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 08:39:03 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 09:53:30 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 11:04:20 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 11:04:30 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 11:08:04 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 11:08:04 UTC] PHP Warning:  include(config.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 11:08:04 UTC] PHP Warning:  include(): Failed opening 'config.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 11:08:04 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[30-Dec-2023 11:08:45 UTC] PHP Warning:  include(/config.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 11:08:45 UTC] PHP Warning:  include(/config.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 11:08:45 UTC] PHP Warning:  include(): Failed opening '/config.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 11:08:45 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[30-Dec-2023 11:09:32 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 11:13:18 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 11:13:20 UTC] PHP Warning:  include(/config.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 11:13:20 UTC] PHP Warning:  include(/config.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 11:13:20 UTC] PHP Warning:  include(): Failed opening '/config.php' for inclusion (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 11:13:20 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[30-Dec-2023 11:14:16 UTC] PHP Warning:  require_once(/php/config.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 11:14:16 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/php/config.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/php/login/login.php:2
+Stack trace:
+#0 /home/bzrasnfa/public_html/index.php(27): include_once()
+#1 {main}
+  thrown in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 11:15:36 UTC] PHP Warning:  require_once(/php/config.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 11:15:36 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/php/config.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/php/login/login.php:2
+Stack trace:
+#0 /home/bzrasnfa/public_html/index.php(27): include_once()
+#1 {main}
+  thrown in /home/bzrasnfa/public_html/php/login/login.php on line 2
+[30-Dec-2023 19:41:19 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 19:45:50 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[30-Dec-2023 19:45:50 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 00:35:23 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 00:35:23 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 00:35:24 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 02:48:49 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 03:09:02 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 05:58:10 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/bzrasnfa/public_html/php/config.php:6
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/config.php(6): mysqli_connect('localhost:3036', 'root', '21826K@ri', 'bzrasnfa_db')
+#1 /home/bzrasnfa/public_html/php/login/login.php(3): require_once('/home/bzrasnfa/...')
+#2 /home/bzrasnfa/public_html/index.php(27): include_once('/home/bzrasnfa/...')
+#3 {main}
+  thrown in /home/bzrasnfa/public_html/php/config.php on line 6
+[31-Dec-2023 05:58:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/bzrasnfa/public_html/php/config.php:6
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/config.php(6): mysqli_connect('localhost:3036', 'root', '21826K@ri', 'bzrasnfa_db')
+#1 /home/bzrasnfa/public_html/php/login/login.php(3): require_once('/home/bzrasnfa/...')
+#2 /home/bzrasnfa/public_html/index.php(27): include_once('/home/bzrasnfa/...')
+#3 {main}
+  thrown in /home/bzrasnfa/public_html/php/config.php on line 6
+[31-Dec-2023 05:58:32 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/bzrasnfa/public_html/php/config.php:6
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/config.php(6): mysqli_connect('localhost:3036', 'root', '21826K@ri', 'bzrasnfa_db')
+#1 /home/bzrasnfa/public_html/php/login/login.php(3): require_once('/home/bzrasnfa/...')
+#2 /home/bzrasnfa/public_html/index.php(27): include_once('/home/bzrasnfa/...')
+#3 {main}
+  thrown in /home/bzrasnfa/public_html/php/config.php on line 6
+[31-Dec-2023 05:58:36 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/bzrasnfa/public_html/php/config.php:6
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/config.php(6): mysqli_connect('localhost:3036', 'root', '21826K@ri', 'bzrasnfa_db')
+#1 /home/bzrasnfa/public_html/php/login/login.php(3): require_once('/home/bzrasnfa/...')
+#2 /home/bzrasnfa/public_html/index.php(27): include_once('/home/bzrasnfa/...')
+#3 {main}
+  thrown in /home/bzrasnfa/public_html/php/config.php on line 6
+[31-Dec-2023 05:58:47 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/bzrasnfa/public_html/php/config.php:6
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/config.php(6): mysqli_connect('localhost:3036', 'root', '21826K@ri', 'bzrasnfa_db')
+#1 /home/bzrasnfa/public_html/php/login/login.php(3): require_once('/home/bzrasnfa/...')
+#2 /home/bzrasnfa/public_html/index.php(27): include_once('/home/bzrasnfa/...')
+#3 {main}
+  thrown in /home/bzrasnfa/public_html/php/config.php on line 6
+[31-Dec-2023 06:02:05 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/bzrasnfa/public_html/php/config.php:6
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/config.php(6): mysqli_connect('localhost:3036', 'root', '21826K@ri', 'bzrasnfa_db')
+#1 /home/bzrasnfa/public_html/php/login/login.php(3): require_once('/home/bzrasnfa/...')
+#2 /home/bzrasnfa/public_html/index.php(27): include_once('/home/bzrasnfa/...')
+#3 {main}
+  thrown in /home/bzrasnfa/public_html/php/config.php on line 6
+[31-Dec-2023 06:02:47 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/bzrasnfa/public_html/php/config.php:6
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/config.php(6): mysqli_connect('localhost:3036', 'root', '21826K@ri', 'bzrasnfa_db')
+#1 /home/bzrasnfa/public_html/php/login/login.php(3): require_once('/home/bzrasnfa/...')
+#2 /home/bzrasnfa/public_html/index.php(27): include_once('/home/bzrasnfa/...')
+#3 {main}
+  thrown in /home/bzrasnfa/public_html/php/config.php on line 6
+[31-Dec-2023 06:03:03 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/bzrasnfa/public_html/php/config.php:6
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/config.php(6): mysqli_connect('localhost:3036', 'root', '21826K@ri', 'bzrasnfa_db')
+#1 /home/bzrasnfa/public_html/php/login/login.php(2): require_once('/home/bzrasnfa/...')
+#2 /home/bzrasnfa/public_html/index.php(27): include_once('/home/bzrasnfa/...')
+#3 {main}
+  thrown in /home/bzrasnfa/public_html/php/config.php on line 6
+[31-Dec-2023 06:03:15 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/bzrasnfa/public_html/php/config.php:6
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/config.php(6): mysqli_connect('localhost:3036', 'root', '21826K@ri', 'bzrasnfa_db')
+#1 /home/bzrasnfa/public_html/php/login/login.php(2): require_once('/home/bzrasnfa/...')
+#2 /home/bzrasnfa/public_html/index.php(27): include_once('/home/bzrasnfa/...')
+#3 {main}
+  thrown in /home/bzrasnfa/public_html/php/config.php on line 6
+[31-Dec-2023 06:03:35 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/bzrasnfa/public_html/php/config.php:6
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/config.php(6): mysqli_connect('localhost:3036', 'root', '21826K@ri', 'bzrasnfa_db')
+#1 /home/bzrasnfa/public_html/php/login/login.php(2): require_once('/home/bzrasnfa/...')
+#2 /home/bzrasnfa/public_html/index.php(27): include_once('/home/bzrasnfa/...')
+#3 {main}
+  thrown in /home/bzrasnfa/public_html/php/config.php on line 6
+[31-Dec-2023 06:03:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/bzrasnfa/public_html/php/config.php:6
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/config.php(6): mysqli_connect('localhost:3036', 'root', '21826K@ri', 'bzrasnfa_db')
+#1 /home/bzrasnfa/public_html/php/login/login.php(2): require_once('/home/bzrasnfa/...')
+#2 /home/bzrasnfa/public_html/index.php(27): include_once('/home/bzrasnfa/...')
+#3 {main}
+  thrown in /home/bzrasnfa/public_html/php/config.php on line 6
+[31-Dec-2023 06:03:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/bzrasnfa/public_html/php/config.php:6
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/config.php(6): mysqli_connect('localhost:3036', 'root', '21826K@ri', 'bzrasnfa_db')
+#1 /home/bzrasnfa/public_html/php/login/login.php(2): require_once('/home/bzrasnfa/...')
+#2 /home/bzrasnfa/public_html/index.php(27): include_once('/home/bzrasnfa/...')
+#3 {main}
+  thrown in /home/bzrasnfa/public_html/php/config.php on line 6
+[31-Dec-2023 06:03:59 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/bzrasnfa/public_html/php/config.php:6
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/config.php(6): mysqli_connect('localhost:3036', 'root', '21826K@ri', 'bzrasnfa_db')
+#1 /home/bzrasnfa/public_html/php/login/login.php(2): require_once('/home/bzrasnfa/...')
+#2 /home/bzrasnfa/public_html/index.php(27): include_once('/home/bzrasnfa/...')
+#3 {main}
+  thrown in /home/bzrasnfa/public_html/php/config.php on line 6
+[31-Dec-2023 06:04:08 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/bzrasnfa/public_html/php/config.php:6
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/config.php(6): mysqli_connect('localhost:3036', 'root', '21826K@ri', 'bzrasnfa_db')
+#1 /home/bzrasnfa/public_html/php/login/login.php(2): require_once('/home/bzrasnfa/...')
+#2 /home/bzrasnfa/public_html/index.php(27): include_once('/home/bzrasnfa/...')
+#3 {main}
+  thrown in /home/bzrasnfa/public_html/php/config.php on line 6
+[31-Dec-2023 06:04:28 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/bzrasnfa/public_html/php/config.php:6
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/config.php(6): mysqli_connect('localhost:3036', 'root', '21826K@ri', 'bzrasnfa_db')
+#1 /home/bzrasnfa/public_html/php/login/login.php(2): require_once('/home/bzrasnfa/...')
+#2 /home/bzrasnfa/public_html/index.php(27): include_once('/home/bzrasnfa/...')
+#3 {main}
+  thrown in /home/bzrasnfa/public_html/php/config.php on line 6
+[31-Dec-2023 06:04:53 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 06:05:06 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 06:05:10 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 06:05:19 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/bzrasnfa/public_html/php/config.php:6
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/config.php(6): mysqli_connect('localhost:3036', 'root', '21826K@ri', 'bzrasnfa_db')
+#1 /home/bzrasnfa/public_html/php/login/login.php(2): require_once('/home/bzrasnfa/...')
+#2 /home/bzrasnfa/public_html/index.php(27): include_once('/home/bzrasnfa/...')
+#3 {main}
+  thrown in /home/bzrasnfa/public_html/php/config.php on line 6
+[31-Dec-2023 06:09:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Connection refused in /home/bzrasnfa/public_html/php/config.php:6
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/config.php(6): mysqli_connect('localhost:3036', 'root', '21826K@ri', 'bzrasnfa_db')
+#1 /home/bzrasnfa/public_html/php/login/login.php(2): require_once('/home/bzrasnfa/...')
+#2 /home/bzrasnfa/public_html/index.php(27): include_once('/home/bzrasnfa/...')
+#3 {main}
+  thrown in /home/bzrasnfa/public_html/php/config.php on line 6
+[31-Dec-2023 06:15:42 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 10:51:13 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 10:54:15 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 10:54:39 UTC] PHP Parse error:  syntax error, unexpected identifier "sent" in /home/bzrasnfa/public_html/php/login/login.php on line 6
+[31-Dec-2023 10:54:52 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 10:55:12 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 10:55:17 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 10:56:10 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 10:56:12 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 10:57:49 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 10:57:52 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 10:57:54 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 10:58:40 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 10:58:44 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 10:58:46 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 10:59:32 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 10:59:34 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 10:59:36 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 11:00:08 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 11:00:09 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 11:00:34 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 11:00:37 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 11:01:15 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 11:01:17 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 11:01:34 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 11:02:07 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 11:02:09 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 11:02:09 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/bzrasnfa/public_html/index.php:1) in /home/bzrasnfa/public_html/php/login/login.php on line 6
+[31-Dec-2023 11:02:30 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 11:02:30 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/bzrasnfa/public_html/index.php:1) in /home/bzrasnfa/public_html/php/login/login.php on line 6
+[31-Dec-2023 11:02:32 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 11:02:49 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 11:02:49 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/bzrasnfa/public_html/index.php:1) in /home/bzrasnfa/public_html/php/login/login.php on line 6
+[31-Dec-2023 11:03:14 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[31-Dec-2023 11:03:16 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 16:33:25 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 18:30:32 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[31-Dec-2023 18:30:33 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[01-Jan-2024 01:36:36 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[01-Jan-2024 02:09:11 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[01-Jan-2024 09:46:40 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[01-Jan-2024 09:46:53 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[01-Jan-2024 10:10:51 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[01-Jan-2024 10:10:52 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[01-Jan-2024 10:10:53 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[01-Jan-2024 11:12:08 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 07:57:30 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 07:57:31 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 07:57:32 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 07:57:33 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 07:58:39 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 07:58:39 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 07:58:40 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 07:58:40 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 07:58:40 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 07:58:40 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 07:58:43 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 07:58:43 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 09:59:59 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 10:00:04 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 4
+[02-Jan-2024 10:00:07 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 10:05:11 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 4
+[02-Jan-2024 10:07:26 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 10:13:30 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 10:15:47 UTC] PHP Warning:  Undefined variable $count in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[02-Jan-2024 10:15:47 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + null in /home/bzrasnfa/public_html/php/login/login.php:3
+Stack trace:
+#0 /home/bzrasnfa/public_html/index.php(27): include_once()
+#1 {main}
+  thrown in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[02-Jan-2024 10:16:48 UTC] PHP Warning:  Undefined variable $count in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[02-Jan-2024 10:16:48 UTC] PHP Fatal error:  Uncaught TypeError: Unsupported operand types: string + null in /home/bzrasnfa/public_html/php/login/login.php:3
+Stack trace:
+#0 /home/bzrasnfa/public_html/index.php(27): include_once()
+#1 {main}
+  thrown in /home/bzrasnfa/public_html/php/login/login.php on line 3
+[02-Jan-2024 10:16:56 UTC] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/bzrasnfa/public_html/index.php:1) in /home/bzrasnfa/public_html/php/login/login.php on line 4
+[02-Jan-2024 10:16:56 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/php/login/login.php on line 10
+[02-Jan-2024 18:00:24 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 19:41:31 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 19:41:32 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[02-Jan-2024 22:59:05 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[03-Jan-2024 07:41:45 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[03-Jan-2024 07:43:34 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[04-Jan-2024 01:02:05 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[04-Jan-2024 01:02:05 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[04-Jan-2024 01:02:06 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[04-Jan-2024 03:38:57 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[04-Jan-2024 10:24:30 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[04-Jan-2024 19:24:17 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[04-Jan-2024 19:24:17 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[04-Jan-2024 19:47:04 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[05-Jan-2024 10:33:23 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[05-Jan-2024 10:38:53 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[05-Jan-2024 13:51:51 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[05-Jan-2024 14:30:01 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[05-Jan-2024 20:16:15 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[05-Jan-2024 20:39:23 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[06-Jan-2024 12:10:56 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[06-Jan-2024 12:57:41 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[06-Jan-2024 16:34:39 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[06-Jan-2024 20:29:53 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
+[06-Jan-2024 20:29:54 UTC] PHP Warning:  Undefined array key "link" in /home/bzrasnfa/public_html/index.php on line 20
