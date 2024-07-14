@@ -1,0 +1,95 @@
+[03-Jul-2024 06:03:47 UTC] PHP Warning:  require_once(php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:03:47 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/setad/index.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:03:51 UTC] PHP Warning:  require_once(php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:03:51 UTC] PHP Fatal error:  Uncaught Error: Failed opening required 'php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/setad/index.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:06:18 UTC] PHP Warning:  require_once(./setad/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:06:18 UTC] PHP Fatal error:  Uncaught Error: Failed opening required './setad/php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/setad/index.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:06:19 UTC] PHP Warning:  require_once(./setad/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:06:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required './setad/php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/setad/index.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:06:49 UTC] PHP Warning:  require_once(./setad/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:06:49 UTC] PHP Fatal error:  Uncaught Error: Failed opening required './setad/php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/setad/index.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:07:03 UTC] PHP Warning:  require_once(./setad/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:07:03 UTC] PHP Fatal error:  Uncaught Error: Failed opening required './setad/php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/setad/index.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:07:05 UTC] PHP Warning:  require_once(./setad/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:07:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required './setad/php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/setad/index.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:07:05 UTC] PHP Warning:  require_once(./setad/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:07:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required './setad/php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/setad/index.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:07:05 UTC] PHP Warning:  require_once(./setad/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:07:05 UTC] PHP Fatal error:  Uncaught Error: Failed opening required './setad/php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/setad/index.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:07:22 UTC] PHP Warning:  require_once(./setad/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:07:22 UTC] PHP Fatal error:  Uncaught Error: Failed opening required './setad/php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/setad/index.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:15:40 UTC] PHP Warning:  session_start(): Session cannot be started after headers have already been sent in /home/bzrasnfa/public_html/setad/index.php on line 3
+[03-Jul-2024 06:15:40 UTC] PHP Warning:  require_once(./setad/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/setad/index.php on line 10
+[03-Jul-2024 06:15:40 UTC] PHP Fatal error:  Uncaught Error: Failed opening required './setad/php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/setad/index.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/setad/index.php on line 10
+[03-Jul-2024 06:15:58 UTC] PHP Warning:  require_once(./setad/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/setad/index.php on line 10
+[03-Jul-2024 06:15:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required './setad/php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/setad/index.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/setad/index.php on line 10
+[03-Jul-2024 06:16:04 UTC] PHP Warning:  require_once(./setad/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/setad/index.php on line 10
+[03-Jul-2024 06:16:04 UTC] PHP Fatal error:  Uncaught Error: Failed opening required './setad/php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/setad/index.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/setad/index.php on line 10
+[03-Jul-2024 06:16:13 UTC] PHP Warning:  require_once(./setad/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:16:13 UTC] PHP Fatal error:  Uncaught Error: Failed opening required './setad/php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/setad/index.php:9
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/setad/index.php on line 9
+[03-Jul-2024 06:35:18 UTC] PHP Warning:  require_once(./setad/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/setad/index.php on line 11
+[03-Jul-2024 06:35:18 UTC] PHP Fatal error:  Uncaught Error: Failed opening required './setad/php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/setad/index.php:11
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/setad/index.php on line 11
+[03-Jul-2024 06:35:33 UTC] PHP Warning:  require_once(./setad/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/setad/index.php on line 10
+[03-Jul-2024 06:35:33 UTC] PHP Fatal error:  Uncaught Error: Failed opening required './setad/php/head.php' (include_path='.:/opt/cpanel/ea-php81/root/usr/share/pear') in /home/bzrasnfa/public_html/setad/index.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/setad/index.php on line 10
+[04-Jul-2024 07:50:10 UTC] PHP Warning:  require_once(./setad/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/setad/index.php on line 10
+[04-Jul-2024 07:50:10 UTC] PHP Stack trace:
+[04-Jul-2024 07:50:10 UTC] PHP   1. {main}() /home/bzrasnfa/public_html/setad/index.php:0
+[04-Jul-2024 07:50:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required './setad/php/head.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bzrasnfa/public_html/setad/index.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/setad/index.php on line 10
+[04-Jul-2024 08:49:34 UTC] PHP Warning:  require_once(./setad/php/head.php): Failed to open stream: No such file or directory in /home/bzrasnfa/public_html/setad/index.php on line 10
+[04-Jul-2024 08:49:34 UTC] PHP Stack trace:
+[04-Jul-2024 08:49:34 UTC] PHP   1. {main}() /home/bzrasnfa/public_html/setad/index.php:0
+[04-Jul-2024 08:49:34 UTC] PHP Fatal error:  Uncaught Error: Failed opening required './setad/php/head.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/bzrasnfa/public_html/setad/index.php:10
+Stack trace:
+#0 {main}
+  thrown in /home/bzrasnfa/public_html/setad/index.php on line 10

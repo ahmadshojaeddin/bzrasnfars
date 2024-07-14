@@ -1,0 +1,49 @@
+.autocomplete {
+    position: relative;
+}
+
+.autocomplete-results {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 33%;
+    z-index: 99999999; /* Adjust z-index as needed */
+    top: calc(100% + 5px); /* Position below the input field */
+    right: 10px;
+}
+
+.autocomplete-results div {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.autocomplete-results div:hover {
+    background-color: #f0f0f0;
+}
+
+
+/* .autocomplete {
+    position: relative;
+}
+
+.autocomplete-results {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 1000;
+}
+
+.autocomplete-results div {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.autocomplete-results div:hover {
+    background-color: #f0f0f0;
+} */

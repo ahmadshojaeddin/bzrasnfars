@@ -1,0 +1,5 @@
+[24-Apr-2024 09:44:57 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Access denied for user 'bzrasnfa_sa'@'localhost' to database 'bzrasnfa' in /home/bzrasnfa/public_html/php/units/autocomplete-drs.php:8
+Stack trace:
+#0 /home/bzrasnfa/public_html/php/units/autocomplete-drs.php(8): mysqli->__construct('localhost', 'bzrasnfa_sa', '21826K@ri', 'bzrasnfa')
+#1 {main}
+  thrown in /home/bzrasnfa/public_html/php/units/autocomplete-drs.php on line 8

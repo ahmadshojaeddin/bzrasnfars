@@ -1,0 +1,38 @@
+* {
+    font-family: "ShabnamFD";
+}
+
+input[type=text], [type=password], [type=submit], [type=search] {
+    border-radius: 20px !important;
+}
+
+.border {
+    border-radius: 20px !important;
+}
+
+/*to decrease bootstrap navbar hight and font-size*/
+.navbar-nav>li>a {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+}
+
+.navbar {
+    min-height: 1px !important
+}
+
+
+* {
+    border-radius: 0px !important;
+}
+
+/*to remove dropdown arrow in navbar*/
+.dropdown-toggle::after {
+    content: none;
+    display: none;
+}
+
+p {
+    margin-bottom: -20px !important;
+    /* line-height: 1em !important; */
+    /* background-color: chocolate; */
+}
