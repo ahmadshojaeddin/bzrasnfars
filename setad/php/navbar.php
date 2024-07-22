@@ -32,7 +32,7 @@
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            نرم افزارها
+                            برنامه ها
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/setad/index.php?link=inspections">بازرسی استان ها</a></li>
