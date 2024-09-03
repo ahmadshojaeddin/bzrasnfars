@@ -85,9 +85,9 @@
                         <ul class="dropdown-menu dropdown-menu-end">
                             <?php
                             if (!isset($_SESSION['login_user'])){
-                                echo "<li><a class='dropdown-item text-end' href='/index.php?link=login'>ورود &nbsp;<i class='fas fa-sign-in-alt fa-1x'></i></a></li>";
+                                echo "<li><a class='dropdown-item text-end' href='./index.php?link=login'>ورود &nbsp;<i class='fas fa-sign-in-alt fa-1x'></i></a></li>";
                             } else {
-                                echo "<li><a class='dropdown-item text-end' href='/index.php?link=logout'>خروج &nbsp;<i class='fas fa-sign-in-alt fa-1x'></i></a></li>";
+                                echo "<li><a class='dropdown-item text-end' href='./index.php?link=logout'>خروج &nbsp;<i class='fas fa-sign-in-alt fa-1x'></i></a></li>";
                             }
                             ?>
                             <!-- <li>

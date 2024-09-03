@@ -12,7 +12,7 @@
         left: 0;
         right: 0;
         margin: auto;
-        background: #FFF;
+        background: #fff;
         box-shadow: 0 0 8px rgba(0, 0, 0, .3);
         transition: margin-top 0.3s ease, height 0.3s ease;
         transform: translateZ(0);

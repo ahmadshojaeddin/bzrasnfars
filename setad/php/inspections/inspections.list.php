@@ -58,7 +58,11 @@
         <!-- PHP TEST -->
         <?php
 
-
+        // Page Number:
+        $pageNumber = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+        $itemsPerPage = 5;
+        $offset = ($pageNumber - 1) * $itemsPerPage;
+        // echo('page: ' . $pageNumber);
 
 
         include_once('php/db/config.php');
@@ -80,6 +84,8 @@
             $sql = "SELECT ins.id as insp_id, date_, st.name_ as state_name, insst.desc_ as status_desc FROM setad.inspections AS ins
                 LEFT OUTER JOIN setad.states AS st ON ins.state_code = st.id
                 LEFT OUTER JOIN setad.inspection_status AS insst ON ins.status_code = insst.id;";
+            // todo: add LIMIT ?,? for pagination
+            // todo: use $conn->prepare()/bind_param()/execute() instead, for paginating results useing $_GET['page_num']...
             $result = $conn->query($sql);
 
             // Fetch results and store in an array
@@ -107,7 +113,6 @@
             $conn->close();
             
         } catch (mysqli_sql_exception $e) {
-
             echo "error: " . $e->getMessage();
         }
 
@@ -118,11 +123,30 @@
     </tbody>
 </table>
 
+<script>
+    function nextPage() {
+        let jsPageNumber = <?php echo $pageNumber; ?>;
+        // alert('Page num: ' + (jsPageNumber + 1));
+        let nextPageNumber = jsPageNumber + 1;
+        // window.location.replace('/setad/index.php?link=inspections&page=' + nextPageNumber);
+        // alert('href: ' + window.location.href);
+        // alert('origin: ' + window.location.origin);
+        // alert('origin + pathname : ' + window.location.origin + window.location.pathname);
+
+        let newURL = window.location.origin + window.location.pathname + '?link=inspections&page=' + nextPageNumber;
+
+        // method 1:
+        window.location.href = newURL;
+        // method 2:
+        // window.history.replaceState(null, '', newURL);
+    }
+</script>
+
 <div class="button-container mt-2">
     <button class="button">اول</button>
     <button class="button">قبل</button>
     <div style="display: inline;">صفحه : ؟</div>
-    <button class="button">بعد</button>
+    <button class="button" onclick="nextPage()">بعد</button>
     <button class="button">آخر</button>
 </div>
 

@@ -56,7 +56,7 @@
 <div class="row">
     <div class="col-md-3 col-sm-2 col-1"></div>
     <div class="col-md-6 col-sm-8 p-5 col-10 border bg-light">
-        <p>ver 21</p>
+        <!-- <p>ver 21</p> -->
         <main class="form-signin w-100 m-auto">
             <form action="" method="post">
                 <h1 class="h3 mb-3 fw-normal">ورود</h1>
@@ -73,7 +73,7 @@
                 <div class="form-check text-start my-3">
                     <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
                     <label class="form-check-label" for="flexCheckDefault">
-                        اطلاعات ورورد مرا به یاد داشته باش
+                        اطلاعات ورود مرا به یاد داشته باش
                     </label>
                 </div>
                 <button class="btn btn-primary w-100 py-2" type="submit">ورود</button>

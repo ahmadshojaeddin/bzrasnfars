@@ -6,7 +6,7 @@ session_start();
 <html>
 
 <head>
-    <?php require_once ("./php/head.php"); ?>
+    <?php require_once("./php/head.php"); ?>
 </head>
 
 
@@ -15,41 +15,48 @@ session_start();
 
     <div class="container-xxl px-0" dir="rtl">
 
-        <?php include_once ('./php/navbar.php'); ?>
+        <?php include_once('./php/navbar.php'); ?>
 
         <div class="row bg-dark-subtle p-3" style="min-height: 400px; background: url('./img/bk02-0.125.jpg');">
 
             <?php
 
             // phpinfo();
-            
+
             $link = '';
 
             if (isset($_GET['link'])) {
 
                 $link = $_GET['link'];
-
             }
 
             switch ($link) {
 
                 case 'inspections':
-                    include_once ('./php/inspections/inspections.php');
+                    include_once('./php/inspections/inspections.php');
                     break;
 
                 case 'addnew':
-                    include_once ('./php/inspections/addnew.php');
+                    include_once('./php/inspections/addnew.php');
+                    break;
+
+                case 'login':
+                    include_once('./php/login/login.php');
+                    break;
+
+                case 'welcome':
+                    include_once('./php/login/welcome.php');
                     break;
 
                 default:
-                    include_once ('./php/home/home.php');
+                    include_once('./php/home/home.php');
             }
 
             ?>
 
         </div>
 
-        <?php include_once ('./php/footer.php'); ?>
+        <?php include_once('./php/footer.php'); ?>
 
     </div>
 
