@@ -62,7 +62,7 @@
         $pageNumber = isset($_GET['page']) ? (int)$_GET['page'] : 1;
         $itemsPerPage = 5;
         $offset = ($pageNumber - 1) * $itemsPerPage;
-        // echo('page: ' . $pageNumber);
+        echo ('page: ' . $offset . ' items per page: ' . $itemsPerPage);
 
 
         include_once('php/db/config.php');
@@ -81,12 +81,17 @@
             }
 
             // Perform SQL query with GET PARAM
-            $sql = "SELECT ins.id as insp_id, date_, st.name_ as state_name, insst.desc_ as status_desc FROM setad.inspections AS ins
+            $sql = "SELECT SQL_CALC_FOUND_ROWS ins.id as insp_id, date_, st.name_ as state_name, insst.desc_ as status_desc FROM setad.inspections AS ins
                 LEFT OUTER JOIN setad.states AS st ON ins.state_code = st.id
-                LEFT OUTER JOIN setad.inspection_status AS insst ON ins.status_code = insst.id;";
-            // todo: add LIMIT ?,? for pagination
-            // todo: use $conn->prepare()/bind_param()/execute() instead, for paginating results useing $_GET['page_num']...
+                LEFT OUTER JOIN setad.inspection_status AS insst ON ins.status_code = insst.id
+                LIMIT {$offset}, {$itemsPerPage};";
             $result = $conn->query($sql);
+
+            // Fetch the total number of records ro Calculate Total Pages Count
+            $totalResult = $conn->query("SELECT FOUND_ROWS() AS total");
+            $rowTotal = $totalResult->fetch_assoc();
+            $totalPages = ceil($rowTotal['total'] / $itemsPerPage);
+            echo ('total: ' . $totalPages);
 
             // Fetch results and store in an array
             $suggestions = array();
@@ -111,11 +116,9 @@
             }
 
             $conn->close();
-            
         } catch (mysqli_sql_exception $e) {
             echo "error: " . $e->getMessage();
         }
-
 
 
         ?>
@@ -123,31 +126,61 @@
     </tbody>
 </table>
 
-<script>
-    function nextPage() {
-        let jsPageNumber = <?php echo $pageNumber; ?>;
-        // alert('Page num: ' + (jsPageNumber + 1));
-        let nextPageNumber = jsPageNumber + 1;
-        // window.location.replace('/setad/index.php?link=inspections&page=' + nextPageNumber);
-        // alert('href: ' + window.location.href);
-        // alert('origin: ' + window.location.origin);
-        // alert('origin + pathname : ' + window.location.origin + window.location.pathname);
-
-        let newURL = window.location.origin + window.location.pathname + '?link=inspections&page=' + nextPageNumber;
-
-        // method 1:
-        window.location.href = newURL;
-        // method 2:
-        // window.history.replaceState(null, '', newURL);
-    }
-</script>
 
 <div class="button-container mt-2">
-    <button class="button">اول</button>
-    <button class="button">قبل</button>
-    <div style="display: inline;">صفحه : ؟</div>
-    <button class="button" onclick="nextPage()">بعد</button>
-    <button class="button">آخر</button>
+
+    <button id="firstButton" class="button">اول</button>
+    <button id="prevButton" class="button" onclick="prevPage()">قبل</button>
+    <div id="pageNumberDiv" style="display: inline;">صفحه : ؟</div>
+    <button id="nextButton" class="button" onclick="nextPage()">بعد</button>
+    <button id="lastButton" class="button">آخر</button>
+
+    <script>
+
+        var totalPages = <?php echo $totalPages; ?>;
+        var pageNumber = <?php echo $pageNumber; ?>;
+
+        let firstButton = document.getElementById("firstButton");
+        let prevButton = document.getElementById("prevButton");
+        let nextButton = document.getElementById("nextButton");
+        let lastButton = document.getElementById("lastButton");
+
+        if (pageNumber >= totalPages) {
+            nextButton.disabled = true;
+            lastButton.disabled = true;
+        } else {
+            nextButton.disabled = false;
+            lastButton.disabled = false;
+        }
+
+        if (pageNumber === 1) {
+            prevButton.disabled = true;
+            firstButton.disabled = true;
+        } else {
+            prevButton.disabled = false;
+            firstButton.disabled = false;
+        }
+
+        let pageNumberDiv = document.getElementById('pageNumberDiv');
+        pageNumberDiv.innerText = 'صفحه: ' + pageNumber;
+
+        function nextPage() {
+            let jsPageNumber = <?php echo $pageNumber; ?>;
+            let nextPageNumber = jsPageNumber + 1;
+            let newURL = window.location.origin + window.location.pathname + '?link=inspections&page=' + nextPageNumber;
+            window.location.href = newURL;
+        }
+
+        function prevPage() {
+            let jsPageNumber = <?php echo $pageNumber; ?>;
+            let nextPageNumber = jsPageNumber - 1;
+            let newURL = window.location.origin + window.location.pathname + '?link=inspections&page=' + nextPageNumber;
+            window.location.href = newURL;
+        }
+
+    </script>
+
+
 </div>
 
 <div class="row"></div>
