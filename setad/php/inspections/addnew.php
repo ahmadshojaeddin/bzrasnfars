@@ -1,9 +1,45 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-
 <head>
-    <title>Test</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=no">
+
+    <!-- GPT styles -->
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+
+        th,
+        td {
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .button-container {
+            margin-bottom: 10px;
+        }
+
+        .button {
+            padding: 10px 15px;
+            margin-right: 5px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    </style>
+
+    <!-- Jalali Calendar -->
+
     <script src="lib/jalalidatepicker/jalalidatepicker.min.js"></script>
     <link rel="stylesheet" href="lib/jalalidatepicker/jalalidatepicker.min.css" />
 
@@ -31,15 +67,29 @@
 
 </head>
 
-<body>
+
+<div class="button-container">
+    <button class="button">دکمه 1</button>
+    <button class="button">دکمه 2</button>
+</div>
+
+<div class="button-container">
+
     <div class="row">
-        <input data-jdp placeholder="شروع بازرسی" style="width: 7em; height: 2em; background-color: #ffffee;" />
+        <input data-jdp placeholder="تاریخ بازرسی" style="width: 7em; height: 2em; background-color: #ffffee;" />
         &nbsp; &nbsp;
-        <input data-jdp placeholder="پایان بازرسی" style="width: 7em; height: 2em; background-color: #ffffee;" />
+        <input placeholder="پایان بازرسی" style="width: 7em; height: 2em; background-color: #ffffee;" />
     </div>
     <script>
         jalaliDatepicker.startWatch({});
     </script>
-</body>
 
-</html>
+</div>
+
+<div class="button-container mt-2">
+    <button class="button">دکمه 1</button>
+    <button class="button">دکمه 2</button>
+</div>
+
+<div class="row"></div>
+<div class="row"></div>

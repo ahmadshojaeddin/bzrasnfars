@@ -1,5 +1,7 @@
 <head>
+
     <style>
+        
         table {
             width: 100%;
             border-collapse: collapse;
@@ -34,6 +36,7 @@
             cursor: pointer;
             font-size: 14px;
         }
+
     </style>
 </head>
 
@@ -179,7 +182,6 @@
         }
 
     </script>
-
 
 </div>
 
