@@ -62,7 +62,7 @@
         $pageNumber = isset($_GET['page']) ? (int)$_GET['page'] : 1;
         $itemsPerPage = 5;
         $offset = ($pageNumber - 1) * $itemsPerPage;
-        echo ('page: ' . $offset . ' items per page: ' . $itemsPerPage);
+        // echo ('page: ' . $offset . ' items per page: ' . $itemsPerPage);
 
 
         include_once('php/db/config.php');
@@ -91,7 +91,7 @@
             $totalResult = $conn->query("SELECT FOUND_ROWS() AS total");
             $rowTotal = $totalResult->fetch_assoc();
             $totalPages = ceil($rowTotal['total'] / $itemsPerPage);
-            echo ('total: ' . $totalPages);
+            // echo ('total: ' . $totalPages);
 
             // Fetch results and store in an array
             $suggestions = array();
