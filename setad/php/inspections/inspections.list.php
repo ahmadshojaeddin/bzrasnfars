@@ -1,7 +1,6 @@
 <head>
 
     <style>
-        
         table {
             width: 100%;
             border-collapse: collapse;
@@ -36,17 +35,19 @@
             cursor: pointer;
             font-size: 14px;
         }
-
     </style>
+
 </head>
 
 
+
 <div class="button-container">
-    <button class="button">جدید</button>
+    <button class="button" onclick="window.location.href = '/setad/index.php?link=addnew';">جدید</button>
     <button class="button">مرتب سازی</button>
 </div>
 
 <table>
+
     <thead>
         <tr>
             <th>ردیف</th>
@@ -56,6 +57,7 @@
             <th></th>
         </tr>
     </thead>
+
     <tbody>
 
         <!-- PHP TEST -->
@@ -123,10 +125,10 @@
             echo "error: " . $e->getMessage();
         }
 
-
         ?>
 
     </tbody>
+
 </table>
 
 

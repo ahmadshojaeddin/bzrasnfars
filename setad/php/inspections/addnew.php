@@ -1,95 +1,85 @@
 <head>
-
-    <!-- GPT styles -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>فرم انتخاب استان و تاریخ</title>
     <style>
-        table {
-            width: 100%;
-            border-collapse: collapse;
+
+        .form-container {
+
+            background-color: white;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+
         }
 
-        table,
-        th,
-        td {
-            border: 1px solid black;
-        }
-
-        th,
-        td {
-            padding: 8px;
+        .form-container h2 {
             text-align: center;
+            margin-bottom: 20px;
         }
 
-        th {
-            background-color: #f2f2f2;
-        }
-
-        .button-container {
+        label {
+            display: block;
             margin-bottom: 10px;
-        }
-
-        .button {
-            padding: 10px 15px;
-            margin-right: 5px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            cursor: pointer;
             font-size: 14px;
         }
-    </style>
 
-    <!-- Jalali Calendar -->
+        select,
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
 
-    <script src="lib/jalalidatepicker/jalalidatepicker.min.js"></script>
-    <link rel="stylesheet" href="lib/jalalidatepicker/jalalidatepicker.min.css" />
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-    <style>
-        .modal {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            background: #FFF;
-            box-shadow: 0 0 8px rgba(0, 0, 0, .3);
-            transition: margin-top 0.3s ease, height 0.3s ease;
-            transform: translateZ(0);
-            box-sizing: border-box;
-            z-index: 999;
-            border-radius: 3px;
-            max-width: 600px;
-            display: block;
-            height: 400px;
-            overflow: scroll;
+        button:hover {
+            background-color: #218838;
         }
     </style>
-
 </head>
 
 
-<div class="button-container">
-    <button class="button">دکمه 1</button>
-    <button class="button">دکمه 2</button>
-</div>
+<div class="row">
 
-<div class="button-container">
-
-    <div class="row">
-        <input data-jdp placeholder="تاریخ بازرسی" style="width: 7em; height: 2em; background-color: #ffffee;" />
-        &nbsp; &nbsp;
-        <input placeholder="پایان بازرسی" style="width: 7em; height: 2em; background-color: #ffffee;" />
+    <div class="col-4">
     </div>
-    <script>
-        jalaliDatepicker.startWatch({});
-    </script>
+
+    <div class="col-4">
+        <div class="form-container">
+            <h2>بازرسی جدید</h2>
+            <form>
+                <label for="province">انتخاب استان:</label>
+                <select id="province" name="province">
+                    <option value="تهران">تهران</option>
+                    <option value="اصفهان">اصفهان</option>
+                    <option value="فارس">فارس</option>
+                    <option value="خراسان">خراسان</option>
+                    <option value="گیلان">گیلان</option>
+                </select>
+
+                <label for="date">انتخاب تاریخ:</label>
+                <input type="date" id="date" name="date">
+
+                <button type="submit">ارسال</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-4">
+    </div>
 
 </div>
-
-<div class="button-container mt-2">
-    <button class="button">دکمه 1</button>
-    <button class="button">دکمه 2</button>
-</div>
-
-<div class="row"></div>
-<div class="row"></div>
