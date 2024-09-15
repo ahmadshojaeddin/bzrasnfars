@@ -2,6 +2,7 @@
 
     <!-- GPT styles -->
     <style>
+
         table {
             width: 100%;
             border-collapse: collapse;
@@ -36,14 +37,17 @@
             cursor: pointer;
             font-size: 14px;
         }
+
     </style>
 
     <!-- Jalali Calendar -->
 
     <script src="lib/jalalidatepicker/jalalidatepicker.min.js"></script>
+    
     <link rel="stylesheet" href="lib/jalalidatepicker/jalalidatepicker.min.css" />
 
     <style>
+
         .modal {
             position: fixed;
             top: 0;
@@ -63,6 +67,7 @@
             height: 400px;
             overflow: scroll;
         }
+
     </style>
 
 </head>
