@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>فرم انتخاب استان و تاریخ</title>
     <style>
-        
         .form-container {
 
             background-color: white;
@@ -59,8 +58,22 @@
         button:hover {
             background-color: #218838;
         }
-
     </style>
+
+
+
+
+
+
+
+    <!-- Province Dropdown -->
+
+    <script src="lib/provincedropdown/provincedropdown.js"></script>
+    <!-- <script>alert('test');</script> -->
+
+    <link rel="stylesheet" href="lib/provincedropdown/provincedropdown.css" />
+
+
 
 
 
@@ -96,35 +109,114 @@
 </head>
 
 
+
+
+
+<!-- P H P -->
+
+<?php
+
+// Database connection and page logic
+include_once('php/db/config.php');
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
+try {
+    // Create connection
+    $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    $conn->set_charset("utf8");
+
+    // Handle form submission for new entry
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+        $state_code = $_POST['state_code'];
+        $date_ = $_POST['date'];
+        $status_code = 1; // programmaticallt and statically set to 1: in-working (note: '2: done')
+
+        // Insert the data into the inspections table
+        $stmt = $conn->prepare("INSERT INTO setad.inspections (state_code, date_, status_code, desc) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("iss", $state_code, $date_, $status_code);
+        $stmt->execute();
+        $stmt->close();
+
+        echo "<p>اطلاعات با موفقیت ذخیره شد.</p>";
+    }
+
+    $conn->close();
+} catch (mysqli_sql_exception $e) {
+    echo "error: " . $e->getMessage();
+}
+
+?>
+
+
+
+
+
+<!-- H T M L -->
+
 <div class="row">
 
     <div class="col-4">
     </div>
 
     <div class="col-4">
+
         <div class="form-container">
+
             <h2>بازرسی جدید</h2>
-            <form>
+
+            <form id="inspectionForm" action="http://localhost/setad/index.php?link=addnew" method="post">
 
                 <label for="province">انتخاب استان:</label>
-                <select id="province" name="province">
-                    <option value="تهران">تهران</option>
-                    <option value="اصفهان">اصفهان</option>
-                    <option value="فارس">فارس</option>
-                    <option value="خراسان">خراسان</option>
-                    <option value="گیلان">گیلان</option>
-                </select>
+                <select class="province-dropdown" id="province" name="province"></select>
 
                 <label for="date">انتخاب تاریخ:</label>
-                <!-- <input type="date" id="date" name="date"> -->
                 <input data-jdp id="date" name="date" placeholder="تاریخ بازرسی" />
                 <script>
                     jalaliDatepicker.startWatch({});
                 </script>
 
+                <!-- با دو روش متغیر های پنهان به فرم اضافه می کنیم -->
+                <!-- یکی همین هایدن اینپوت ها -->
+                <!-- Hidden inputs for extra data -->
+                <!-- <input type="hidden" name="extra_data1" id="extra_data1" value="value1"> -->
+                <!-- <input type="hidden" name="extra_data2" id="extra_data2" value="value2"> -->
+                <!-- یکی هم با جاوا اسکریپت که پایین تر استفاده کردم -->
+
                 <button type="submit">ارسال</button>
+
             </form>
+
+            <script>
+                document.getElementById('inspectionForm').addEventListener('submit', function(e) {
+
+                    let provinceElement = document.getElementById('province');
+                    let selectedText = provinceElement.options[provinceElement.selectedIndex].text;
+                    let splittedText = selectedText.split('|').map(s => s.trim());
+                    let state_code = splittedText[0];
+                    let state_name = splittedText[1];
+
+                    // Create a new hidden input field for state_code
+                    var extraInput = document.createElement('input');
+                    extraInput.type = 'hidden';
+                    extraInput.name = 'state_code'; // Name for the POST request
+                    extraInput.value = state_code; // Value you want to submit
+                    // Append the hidden input to the form
+                    this.appendChild(extraInput);
+
+                    // Create a new hidden input field for state_code
+                    var extraInput = document.createElement('input');
+                    extraInput.type = 'hidden';
+                    extraInput.name = 'state_name'; // Name for the POST request
+                    extraInput.value = state_name; // Value you want to submit
+                    // Append the hidden input to the form
+                    this.appendChild(extraInput);
+
+                });
+            </script>
+
         </div>
+
     </div>
 
     <div class="col-4">

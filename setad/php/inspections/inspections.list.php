@@ -60,7 +60,6 @@
 
     <tbody>
 
-        <!-- PHP TEST -->
         <?php
 
         // Page Number:
