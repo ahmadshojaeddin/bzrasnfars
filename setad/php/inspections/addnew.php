@@ -1,3 +1,57 @@
+<?php
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
+// header("Location:www.google.com");
+// exit();
+?>
+
+<?php
+// Database connection and page logic
+include_once('php/db/config.php');
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
+try {
+    // Create connection
+    $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    $conn->set_charset("utf8");
+
+    // Handle form submission for new entry
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+        $state_code = $_POST['state_code'];
+        $date_ = $_POST['date'];
+        $status_code = 1; // programmaticallt and statically set to 1: in-working (note: '2: done')
+        $desc_ = 'by-code';
+
+        // Insert the data into the inspections table
+        $stmt = $conn->prepare("INSERT INTO setad.inspections (state_code, date_, status_code, desc_) VALUES (?, ?, ?, ?);");
+        $stmt->bind_param("isss", $state_code, $date_, $status_code, $desc_);
+        $stmt->execute();
+        $stmt->close();
+
+        echo "<p>اطلاعات با موفقیت ذخیره شد.</p>";
+
+        // Redirect to another URL
+        // $redir_url = 'Location: /setad/index.php?link=inspections';
+        // echo($redir_url);
+        header($redir_url);
+        exit(); // Make sure to call exit after header redirection
+
+    }
+
+    $conn->close();
+
+} catch (mysqli_sql_exception $e) {
+
+    echo "error: " . $e->getMessage();
+
+}
+
+?>
+
+
+
 <head>
 
     <meta charset="UTF-8">
@@ -109,44 +163,6 @@
 </head>
 
 
-
-
-
-<!-- P H P -->
-
-<?php
-
-// Database connection and page logic
-include_once('php/db/config.php');
-mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-
-try {
-    // Create connection
-    $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-    $conn->set_charset("utf8");
-
-    // Handle form submission for new entry
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-        $state_code = $_POST['state_code'];
-        $date_ = $_POST['date'];
-        $status_code = 1; // programmaticallt and statically set to 1: in-working (note: '2: done')
-
-        // Insert the data into the inspections table
-        $stmt = $conn->prepare("INSERT INTO setad.inspections (state_code, date_, status_code, desc) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("iss", $state_code, $date_, $status_code);
-        $stmt->execute();
-        $stmt->close();
-
-        echo "<p>اطلاعات با موفقیت ذخیره شد.</p>";
-    }
-
-    $conn->close();
-} catch (mysqli_sql_exception $e) {
-    echo "error: " . $e->getMessage();
-}
-
-?>
 
 
 
