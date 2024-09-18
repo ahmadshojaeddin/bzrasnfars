@@ -35,7 +35,7 @@
                             برنامه ها
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/setad/index.php?link=inspections">بازرسی استان ها</a></li>
+                            <li><a class="dropdown-item" href="/setad/index.php?link=list">بازرسی استان ها</a></li>
                         </ul>
                     </li>
 

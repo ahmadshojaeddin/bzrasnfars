@@ -32,8 +32,8 @@ session_start();
 
             switch ($link) {
 
-                case 'inspections':
-                    include_once('./php/inspections/inspections.php');
+                case 'list':
+                    include_once('./php/inspections/list.php');
                     break;
 
                 case 'addnew':

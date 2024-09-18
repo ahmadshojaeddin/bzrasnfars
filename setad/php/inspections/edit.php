@@ -1,4 +1,12 @@
 <?php
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
+// header("Location:www.google.com");
+// exit();
+?>
+
+<?php
 
 $shouldRedirectToInspectionsList = false;
 
@@ -51,7 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     let shouldRedirect = <?php echo json_encode($shouldRedirectToInspectionsList); ?>;
     if (shouldRedirect) {
         // Redirect to the target URL
-        window.location.href = 'http://localhost/setad/index.php?link=list';
+        window.location.href = 'http://localhost/setad/index.php?link=inspections';
     }
 </script>
 
@@ -185,7 +193,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <h2>بازرسی جدید</h2>
 
-            <form id="inspectionForm" action="http://localhost/setad/index.php?link=addnew" method="post" autocomplete="off">
+            <form id="inspectionForm" action="http://localhost/setad/index.php?link=addnew" method="post">
 
                 <label for="province">انتخاب استان:</label>
                 <select class="province-dropdown" id="province" name="province"></select>
