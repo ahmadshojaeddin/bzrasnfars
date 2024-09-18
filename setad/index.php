@@ -40,6 +40,10 @@ session_start();
                     include_once('./php/inspections/addnew.php');
                     break;
 
+                case 'edit':
+                    include_once('./php/inspections/edit.php');
+                    break;
+
                 case 'login':
                     include_once('./php/login/login.php');
                     break;

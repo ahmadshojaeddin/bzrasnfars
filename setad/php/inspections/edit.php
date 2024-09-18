@@ -1,255 +1,202 @@
-<?php
-// ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
-// error_reporting(E_ALL);
-// header("Location:www.google.com");
-// exit();
-?>
-
-<?php
-
-$shouldRedirectToInspectionsList = false;
-
-// Handle form submission for new entry
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-    try {
-
-        // Database connection and page logic
-        include_once('php/db/config.php');
-        mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
-
-        // Create connection
-        $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
-        $conn->set_charset("utf8");
-
-        $state_code = $_POST['state_code'];
-        $date_ = $_POST['date'];
-        $status_code = 1; // programmaticallt and statically set to 1: in-working (note: '2: done')
-        $desc_ = 'by-code';
-
-        // Insert the data into the inspections table
-        $stmt = $conn->prepare("INSERT INTO setad.inspections (state_code, date_, status_code, desc_) VALUES (?, ?, ?, ?);");
-        $stmt->bind_param("isss", $state_code, $date_, $status_code, $desc_);
-        $stmt->execute();
-        $stmt->close();
-
-        echo "<p>اطلاعات با موفقیت ذخیره شد.</p>";
-
-        // Redirect to another URL
-        // $redir_url = 'Location: /setad/index.php?link=inspections';
-        // echo($redir_url);
-        // header($redir_url);
-        // exit(); // Make sure to call exit after header redirection
-        $shouldRedirectToInspectionsList = true;
-
-        $conn->close();
-
-    } catch (mysqli_sql_exception $e) {
-
-        echo "error: " . $e->getMessage();
+<style>
+    /* CSS styles */
+    .form-container {
+        background-color: transparent;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
     }
 
-}
-
-?>
-
-
-<script>
-    let shouldRedirect = <?php echo json_encode($shouldRedirectToInspectionsList); ?>;
-    if (shouldRedirect) {
-        // Redirect to the target URL
-        window.location.href = 'http://localhost/setad/index.php?link=inspections';
+    .form-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: 15px;
     }
-</script>
 
+    label {
+        margin-right: 10px;
+        font-weight: bold;
+    }
 
-<head>
+    select,
+    input[type="text"] {
+        padding: 5px;
+        margin-right: 20px;
+        border-radius: 0;
+        /*4px;*/
+        border: 1px solid #ccc;
+    }
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>فرم انتخاب استان و تاریخ</title>
-    <style>
-        .form-container {
+    button {
+        padding: 8px 15px;
+        background-color: #5cb85c;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin-right: 10px;
+        color: white;
+        flex-grow: 0;
+    }
 
-            background-color: white;
-            border: 1px solid #ccc;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            width: 300px;
+    .table-container {
+        margin-top: 20px;
+        position: relative;
+        /* برای نگه داشتن دکمه در محدوده جدول */
+        padding-bottom: 50px;
+        /* ایجاد فضای کافی زیر جدول برای دکمه */
+        text-align: left;
+    }
 
-        }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
 
-        .form-container h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
+    table,
+    th,
+    td {
+        border: 1px solid #000;
+    }
 
-        label {
-            display: block;
-            margin-bottom: 10px;
-            font-size: 14px;
-        }
+    th,
+    td {
+        padding: 10px;
+        text-align: center;
+    }
 
-        select,
-        input[type="date"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
-        }
+    thead {
+        background-color: #ddd;
+    }
 
-        #date {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 14px;
-        }
+    a {
+        color: blue;
+        text-decoration: none;
+    }
 
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: #28a745;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
+    a:hover {
+        text-decoration: underline;
+    }
 
-        button:hover {
-            background-color: #218838;
-        }
-    </style>
+    .back-button {
 
+        display: inline-block;
+        /* از حالت block به inline-block تغییر دهید */
+        margin-top: 20px;
+        background-color: #5cb85c;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        text-align: center;
+        width: 100px;
+        clear: both;
+        /* اطمینان از اینکه دکمه بعد از جدول قرار بگیرد */
 
+    }
+</style>
 
+<div class="form-container">
+    <form>
 
+        <div class="form-row">
+            <label for="province">استان:</label>
+            <select id="province" name="province">
+                <option value="">انتخاب کنید</option>
+                <option value="1">استان ۱</option>
+                <option value="2">استان ۲</option>
+            </select>
 
+            <label for="status">وضعیت:</label>
+            <select id="status" name="status">
+                <option value="pending">در دست اقدام</option>
+                <option value="completed">تکمیل شده</option>
+            </select>
 
+            <label for="date">تاریخ:</label>
+            <input type="text" id="date" name="date">
 
-    <!-- Province Dropdown -->
-
-    <script src="lib/provincedropdown/provincedropdown.js"></script>
-    <!-- <script>alert('test');</script> -->
-
-    <link rel="stylesheet" href="lib/provincedropdown/provincedropdown.css" />
-
-
-
-
-
-    <!-- Jalali Calendar -->
-
-    <script src="lib/jalalidatepicker/jalalidatepicker.min.js"></script>
-
-    <link rel="stylesheet" href="lib/jalalidatepicker/jalalidatepicker.min.css" />
-
-    <style>
-        .modal {
-            position: fixed;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: auto;
-            background: #FFF;
-            box-shadow: 0 0 8px rgba(0, 0, 0, .3);
-            transition: margin-top 0.3s ease, height 0.3s ease;
-            transform: translateZ(0);
-            box-sizing: border-box;
-            z-index: 999;
-            border-radius: 3px;
-            max-width: 600px;
-            display: block;
-            height: 400px;
-            overflow: scroll;
-        }
-    </style>
-
-
-</head>
-
-
-
-
-
-
-
-<!-- H T M L -->
-
-<div class="row">
-
-    <div class="col-4">
-    </div>
-
-    <div class="col-4">
-
-        <div class="form-container">
-
-            <h2>بازرسی جدید</h2>
-
-            <form id="inspectionForm" action="http://localhost/setad/index.php?link=addnew" method="post">
-
-                <label for="province">انتخاب استان:</label>
-                <select class="province-dropdown" id="province" name="province"></select>
-
-                <label for="date">انتخاب تاریخ:</label>
-                <input data-jdp id="date" name="date" placeholder="تاریخ بازرسی" />
-                <script>
-                    jalaliDatepicker.startWatch({});
-                </script>
-
-                <!-- با دو روش متغیر های پنهان به فرم اضافه می کنیم -->
-                <!-- یکی همین هایدن اینپوت ها -->
-                <!-- Hidden inputs for extra data -->
-                <!-- <input type="hidden" name="extra_data1" id="extra_data1" value="value1"> -->
-                <!-- <input type="hidden" name="extra_data2" id="extra_data2" value="value2"> -->
-                <!-- یکی هم با جاوا اسکریپت که پایین تر استفاده کردم -->
-
-                <button type="submit">ارسال</button>
-
-            </form>
-
-            <script>
-
-                document.getElementById('inspectionForm').addEventListener('submit', function(e) {
-
-                    let provinceElement = document.getElementById('province');
-                    let state_code = provinceElement.value;
-                    let state_name = provinceElement.options[provinceElement.selectedIndex].text;
-                    // let splittedText = selectedText.split('|').map(s => s.trim());
-                    // alert(state_code + ':' + state_name);
-
-                    // Create a new hidden input field for state_code
-                    var extraInput = document.createElement('input');
-                    extraInput.type = 'hidden';
-                    extraInput.name = 'state_code'; // Name for the POST request
-                    extraInput.value = state_code; // Value you want to submit
-                    // Append the hidden input to the form
-                    this.appendChild(extraInput);
-
-                    // Create a new hidden input field for state_code
-                    var extraInput = document.createElement('input');
-                    extraInput.type = 'hidden';
-                    extraInput.name = 'state_name'; // Name for the POST request
-                    extraInput.value = state_name; // Value you want to submit
-                    // Append the hidden input to the form
-                    this.appendChild(extraInput);
-
-                });
-
-            </script>
+            <button type="submit">ثبت</button>
 
         </div>
 
-    </div>
+    </form>
+</div>
 
-    <div class="col-4">
-    </div>
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>ردیف</th>
+                <th>عنوان</th>
+                <th>ویرایش</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>۱</td>
+                <td>ارزیابی عملکرد اداره رتبه‌بندی فراهم‌کنندگان خدمات و خرید راهبردی</td>
+                <td><a href="#">ویرایش</a></td>
+            </tr>
+            <tr>
+                <td>۲</td>
+                <td>ارزیابی عملکرد کمیته فنی</td>
+                <td><a href="#">ویرایش</a></td>
+            </tr>
+            <tr>
+                <td>۳</td>
+                <td>ارزیابی عملکرد شورای علمی تخصصی</td>
+                <td><a href="#">ویرایش</a></td>
+            </tr>
+            <tr>
+                <td>۴</td>
+                <td>ارزیابی عملکرد شوراها و کمیته‌های مشترک استانی با سایر سازمان‌ها</td>
+                <td><a href="#">ویرایش</a></td>
+            </tr>
+            <tr>
+                <td>۵</td>
+                <td>ارزیابی عملکرد اداره نظارت و بازرسی</td>
+                <td><a href="#">ویرایش</a></td>
+            </tr>
+            <tr>
+                <td>۶</td>
+                <td>ارزیابی عملکرد واحد رسیدگی صورت‌حساب‌ها</td>
+                <td><a href="#">ویرایش</a></td>
+            </tr>
+            <tr>
+                <td>۷</td>
+                <td>ارزیابی عملکرد واحد رسیدگی صورت‌حساب‌های پزشکان</td>
+                <td><a href="#">ویرایش</a></td>
+            </tr>
+            <tr>
+                <td>۸</td>
+                <td>ارزیابی عملکرد واحد رسیدگی صورت‌حساب‌های دندانپزشکان و درمانگاه‌ها</td>
+                <td><a href="#">ویرایش</a></td>
+            </tr>
+            <tr>
+                <td>۹</td>
+                <td>ارزیابی عملکرد واحد رسیدگی صورت‌حساب‌های داروخانه‌ها</td>
+                <td><a href="#">ویرایش</a></td>
+            </tr>
+            <tr>
+                <td>۱۰</td>
+                <td>ارزیابی عملکرد واحد رسیدگی صورت‌حساب‌های مراکز جراحی محدود</td>
+                <td><a href="#">ویرایش</a></td>
+            </tr>
+            <tr>
+                <td>۱۱</td>
+                <td>ارزیابی عملکرد واحد رسیدگی صورت‌حساب‌های خسارت متفرقه</td>
+                <td><a href="#">ویرایش</a></td>
+            </tr>
+            <tr>
+                <td>۱۲</td>
+                <td>ارزیابی عملکرد اداره امور مالی و ممیزی</td>
+                <td><a href="#">ویرایش</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!-- دکمه بازگشت در پایین صفحه -->
+    <a href="index.php" class="back-button">بازگشت</a>
 
 </div>
