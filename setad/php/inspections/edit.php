@@ -1,110 +1,172 @@
-<style>
-    /* CSS styles */
-    .form-container {
-        background-color: transparent;
-        padding: 20px;
-        border-radius: 8px;
-        margin-bottom: 20px;
-    }
+<head>
 
-    .form-row {
-        display: flex;
-        align-items: center;
-        margin-bottom: 15px;
-    }
+    <style>
+        /* CSS styles */
+        .form-container {
+            background-color: transparent;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
 
-    label {
-        margin-right: 10px;
-        font-weight: bold;
-    }
+        .form-row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
 
-    select,
-    input[type="text"] {
-        padding: 5px;
-        margin-right: 20px;
-        border-radius: 0;
-        /*4px;*/
-        border: 1px solid #ccc;
-    }
+        label {
+            margin-right: 10px;
+            font-weight: bold;
+        }
 
-    button {
-        padding: 8px 15px;
-        background-color: #5cb85c;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        margin-right: 10px;
-        color: white;
-        flex-grow: 0;
-    }
+        select,
+        input[type="text"] {
+            padding: 5px;
+            margin-right: 20px;
+            border-radius: 0;
+            /*4px;*/
+            border: 1px solid #ccc;
+        }
 
-    .table-container {
-        margin-top: 20px;
-        position: relative;
-        /* برای نگه داشتن دکمه در محدوده جدول */
-        padding-bottom: 50px;
-        /* ایجاد فضای کافی زیر جدول برای دکمه */
-        text-align: left;
-    }
+        button {
+            padding: 8px 15px;
+            background-color: #5cb85c;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+            color: white;
+            flex-grow: 0;
+        }
 
-    table {
-        width: 100%;
-        border-collapse: collapse;
-    }
+        .table-container {
+            margin-top: 20px;
+            position: relative;
+            /* برای نگه داشتن دکمه در محدوده جدول */
+            padding-bottom: 50px;
+            /* ایجاد فضای کافی زیر جدول برای دکمه */
+            text-align: left;
+        }
 
-    table,
-    th,
-    td {
-        border: 1px solid #000;
-    }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
 
-    th,
-    td {
-        padding: 10px;
-        text-align: center;
-    }
+        table,
+        th,
+        td {
+            border: 1px solid #000;
+        }
 
-    thead {
-        background-color: #ddd;
-    }
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
 
-    a {
-        color: blue;
-        text-decoration: none;
-    }
+        thead {
+            background-color: #ddd;
+        }
 
-    a:hover {
-        text-decoration: underline;
-    }
+        a {
+            color: blue;
+            text-decoration: none;
+        }
 
-    .back-button {
+        a:hover {
+            text-decoration: underline;
+        }
 
-        display: inline-block;
-        /* از حالت block به inline-block تغییر دهید */
-        margin-top: 20px;
-        background-color: #5cb85c;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        text-align: center;
-        width: 100px;
-        clear: both;
-        /* اطمینان از اینکه دکمه بعد از جدول قرار بگیرد */
+        .back-button {
 
-    }
-</style>
+            display: inline-block;
+            /* از حالت block به inline-block تغییر دهید */
+            margin-top: 20px;
+            background-color: #5cb85c;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            text-align: center;
+            width: 100px;
+            clear: both;
+            /* اطمینان از اینکه دکمه بعد از جدول قرار بگیرد */
+
+        }
+    </style>
+
+
+    <!-- Province Dropdown -->
+    <script src="lib/provincedropdown/provincedropdown.js"></script>
+    <link rel="stylesheet" href="lib/provincedropdown/provincedropdown.css" />
+
+
+
+
+    <!-- Jalali Calendar -->
+
+    <script src="lib/jalalidatepicker/jalalidatepicker.min.js"></script>
+    <link rel="stylesheet" href="lib/jalalidatepicker/jalalidatepicker.min.css" />
+
+    <style>
+        select,
+        input[type="date"] {
+            width: 15%;
+            padding: 10px;
+            /* margin-bottom: 15px; */
+            border: 1px solid #ccc;
+            /* border-radius: 5px; */
+            font-size: 14px;
+        }
+
+        #date {
+            width: 15%;
+            padding: 10px;
+            /* margin-bottom: 15px; */
+            border: 1px solid #ccc;
+            /* border-radius: 5px; */
+            font-size: 14px;
+        }
+
+        .modal {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            background: #FFF;
+            box-shadow: 0 0 8px rgba(0, 0, 0, .3);
+            transition: margin-top 0.3s ease, height 0.3s ease;
+            transform: translateZ(0);
+            box-sizing: border-box;
+            z-index: 999;
+            border-radius: 3px;
+            max-width: 600px;
+            display: block;
+            height: 400px;
+            overflow: scroll;
+        }
+    </style>
+
+</head>
 
 <div class="form-container">
-    <form>
+
+    <form autocomplete="off">
 
         <div class="form-row">
-            <label for="province">استان:</label>
+            <!-- <label for="province">استان:</label>
             <select id="province" name="province">
                 <option value="">انتخاب کنید</option>
                 <option value="1">استان ۱</option>
                 <option value="2">استان ۲</option>
-            </select>
+            </select> -->
+            <label for="province">انتخاب استان:</label>
+            <select class="province-dropdown" id="province" name="province"></select>
+
 
             <label for="status">وضعیت:</label>
             <select id="status" name="status">
@@ -112,17 +174,24 @@
                 <option value="completed">تکمیل شده</option>
             </select>
 
-            <label for="date">تاریخ:</label>
-            <input type="text" id="date" name="date">
+            <!-- <label for="date">تاریخ:</label>
+            <input type="text" id="date" name="date" style="border-radius: 0px !important;"> -->
+            <label for="date">انتخاب تاریخ:</label>
+            <input data-jdp id="date" name="date" placeholder="تاریخ بازرسی" />
+            <script>
+                jalaliDatepicker.startWatch({});
+            </script>
 
-            <button type="submit">ثبت</button>
+            <button type="submit" style="border-radius: 0px !important;">ثبت</button>
 
         </div>
 
     </form>
+
 </div>
 
 <div class="table-container">
+
     <table>
         <thead>
             <tr>
@@ -197,6 +266,11 @@
 
 
     <!-- دکمه بازگشت در پایین صفحه -->
-    <a href="index.php" class="back-button">بازگشت</a>
+    <script>
+        function returnToInspectionsList() {
+            window.location.href = "setad/index.php?link=list";
+        }
+    </script>
+    <a href="index.php" class="back-button" onclick="returnToInspectionsList()">بازگشت</a>
 
 </div>

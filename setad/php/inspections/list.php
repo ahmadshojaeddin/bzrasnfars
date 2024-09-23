@@ -57,10 +57,11 @@
 
             <thead>
                 <tr>
-                    <th>ردیف</th>
+                    <th>شماره</th>
                     <th>استان</th>
                     <th>تاریخ</th>
                     <th>وضعیت</th>
+                    <th></th>
                     <th></th>
                 </tr>
             </thead>
@@ -121,16 +122,21 @@
                         <td>$state</td>
                         <td>$date</td>
                         <td>$status</td>
-                        <td><a href=\"#\">ویرایش</a></td>
+                        <td><a href=\"/setad/index.php?link=edit&id=$id\">ویرایش</a></td>
+                        <td><a href=\"#\">حذف</a></td>
                     </tr>
                     ";
+
                         }
+
                     }
 
                     $conn->close();
+
                 } catch (mysqli_sql_exception $e) {
 
                     echo "error: " . $e->getMessage();
+
                 }
 
                 ?>
@@ -199,6 +205,7 @@
                     let newURL = window.location.origin + window.location.pathname + '?link=list&page=' + jsPageNumber;
                     window.location.href = newURL;
                 }
+
             </script>
 
         </div>

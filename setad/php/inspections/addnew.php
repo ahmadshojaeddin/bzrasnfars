@@ -125,10 +125,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 
     <!-- Province Dropdown -->
-
     <script src="lib/provincedropdown/provincedropdown.js"></script>
-    <!-- <script>alert('test');</script> -->
-
     <link rel="stylesheet" href="lib/provincedropdown/provincedropdown.css" />
 
 
@@ -138,7 +135,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <!-- Jalali Calendar -->
 
     <script src="lib/jalalidatepicker/jalalidatepicker.min.js"></script>
-
     <link rel="stylesheet" href="lib/jalalidatepicker/jalalidatepicker.min.css" />
 
     <style>
