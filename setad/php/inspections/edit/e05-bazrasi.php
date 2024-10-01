@@ -14,8 +14,16 @@
     </style>
 </head>
 
+<div class="row">
+<div class="col-2"> </div>
+<div class="col-8">
 <div class="container mt-5">
+
     <h2 class="mb-4">عملکرد اداره نظارت و بازرسی</h2>
+    <!-- <hr style="border: 1px solid black; width: 45%;"> -->
+    <br>
+    <br>
+
     <form action="submit_form.php" method="post">
         <div class="form-group">
             <label>1- عملکرد اداره نظارت و بازرسی در سال 1402 در خصوص نظارت و بازرسی مراکز طرف قرارداد به شرح زیر می‌باشد:</label>
@@ -386,9 +394,13 @@
             <label>سایر موارد ارزیابی عملکرد اداره نظارت و بازرسی:</label>
             <textarea class="form-control" name="additional_comments" rows="3"></textarea>
         </div>
-
+        <br/>
+        <br/>
         <button type="submit" class="btn btn-primary">ارسال</button>
     </form>
 </div>
-\<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</div> <!-- end of col-8 -->
+<div class="col-2"> </div>
+</div> <!-- end of row -->

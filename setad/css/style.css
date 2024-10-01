@@ -3,11 +3,11 @@
 }
 
 input[type=text], [type=password], [type=submit], [type=search] {
-    border-radius: 20px !important;
+    border-radius: 8px !important;
 }
 
 .border {
-    border-radius: 20px !important;
+    border-radius: 8px !important;
 }
 
 /*to decrease bootstrap navbar hight and font-size*/

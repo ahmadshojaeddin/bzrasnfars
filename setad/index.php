@@ -25,10 +25,8 @@ session_start();
 
             $link = '';
 
-            if (isset($_GET['link'])) {
-
+            if (isset($_GET['link']))
                 $link = $_GET['link'];
-            }
 
             switch ($link) {
 
@@ -42,6 +40,20 @@ session_start();
 
                 case 'edit':
                     include_once('./php/inspections/edit.php');
+                    break;
+
+                case 'editform':
+
+                    if (isset($_GET['id']))
+                        $id = $_GET['id'];
+
+                    switch ($id) {
+                        case '5':
+                            // echo("<p>in line test</p>");
+                            include_once('./php/inspections/edit/e05-bazrasi.php');
+                            break;
+                    }
+
                     break;
 
                 case 'login':

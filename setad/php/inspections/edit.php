@@ -224,7 +224,7 @@
             <tr>
                 <td>۵</td>
                 <td>ارزیابی عملکرد اداره نظارت و بازرسی</td>
-                <td><a href="#">ویرایش</a></td>
+                <td><a href="index.php?link=editform&id=5">ویرایش</a></td>
             </tr>
             <tr>
                 <td>۶</td>
