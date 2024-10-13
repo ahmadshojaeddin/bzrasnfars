@@ -2,7 +2,7 @@
 // echo ('footer-setad');
 ?>
 
-<div class="row bg-dark small">
+<div class="row bg-dark small m-0">
 
     <div class="row bg-dark m-0">
 

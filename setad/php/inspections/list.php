@@ -53,6 +53,23 @@
             <button class="button">مرتب سازی</button>
         </div>
 
+        <!-- مودال کانفریمیشن برای حذف -->
+        <div class="modal fade" id="confirmationModal" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body text-center">
+                        آبا برای حذف این مورد مطمئن هستید
+                    </div>
+                    <div class="modal-footer justify-content-center">
+                        <button type="button" class="btn btn-primary" id="yesButton">بله</button>
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">نه</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- جدول موارد بازرسی -->
         <table>
 
             <thead>
@@ -71,11 +88,11 @@
                 <?php
 
                 // Page Number:
-                $pageNumber = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+                $pageNumber = isset($_GET['page']) ? (int) $_GET['page'] : 1;
                 $itemsPerPage = 5;
                 $offset = ($pageNumber - 1) * $itemsPerPage;
                 // echo ('page: ' . $offset . ' items per page: ' . $itemsPerPage);
-
+                
 
                 include_once('php/db/config.php');
 
@@ -105,7 +122,7 @@
                     $rowTotal = $totalResult->fetch_assoc();
                     $totalPages = ceil($rowTotal['total'] / $itemsPerPage);
                     // echo ('total: ' . $totalPages);
-
+                
                     // Fetch results and store in an array
                     $suggestions = array();
                     if ($result->num_rows > 0) {
@@ -123,7 +140,7 @@
                         <td>$date</td>
                         <td>$status</td>
                         <td><a href=\"/setad/index.php?link=edit&id=$id\">ویرایش</a></td>
-                        <td><a href=\"#\">حذف</a></td>
+                        <td><a href=\"#\" data-bs-toggle=\"modal\" data-bs-target=\"#confirmationModal\" data-id=\"$id\">حذف</a></td>
                     </tr>
                     ";
 
@@ -144,6 +161,43 @@
             </tbody>
 
         </table>
+
+
+        <!-- script for delete operation and pass item id to delete modal -->
+        <script>
+
+            let itemId = 0; // Variable to store the item ID
+
+
+            // Event listener to handle all modal showing
+            document.querySelectorAll('[data-bs-target="#confirmationModal"]').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    // Get the ID from the link's data attribute
+                    itemId = this.getAttribute('data-id');
+                    // alert('itemId: ' + itemId);
+                });
+            });
+
+
+            // Handle Yes button click
+            document.getElementById('yesButton').addEventListener('click', function () {
+                // Call your delete function here, passing the itemId
+                deleteItem(itemId);
+                // Hide the modal
+                var modal = bootstrap.Modal.getInstance(document.getElementById('confirmationModal'));
+                modal.hide();
+            });
+
+            function deleteItem(id) {
+                // todo: ...
+                // alert('delete item #' + id);
+                // refresh page
+                window.location.href = window.location.href;
+            }
+
+        </script>
+
+
 
 
         <div class="button-container mt-2">
