@@ -57,7 +57,7 @@
         <div class="modal fade" id="confirmationModal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <div class="modal-body text-center">
+                    <div class="modal-body text-center" id="confirmationMessage">
                         آبا برای حذف این مورد مطمئن هستید
                     </div>
                     <div class="modal-footer justify-content-center">
@@ -94,7 +94,7 @@
                 // echo ('page: ' . $offset . ' items per page: ' . $itemsPerPage);
                 
 
-                include_once('php/db/config.php');
+                include_once 'php/db/config.php';
 
                 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
@@ -175,6 +175,9 @@
                     // Get the ID from the link's data attribute
                     itemId = this.getAttribute('data-id');
                     // alert('itemId: ' + itemId);
+                    // Update the modal message to include the item ID
+                    document.getElementById('confirmationMessage').innerHTML =
+                        `آیا برای حذف ردیف شماره ${itemId} مطمئن هستید؟`;
                 });
             });
 
@@ -189,11 +192,30 @@
             });
 
             function deleteItem(id) {
-                // todo: ...
-                // alert('delete item #' + id);
-                // refresh page
-                window.location.href = window.location.href;
+
+                // Create a form and submit it using fetch to the current URL
+                fetch('/setad/php/inspections/delete.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams({
+                        'item_id': id // Send item_id as a POST parameter
+                    })
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            alert(data.message); // Show success message
+                            // Redirect to the inspections list page
+                            window.location.href = window.location.href;
+                        } else {
+                            alert(data.message); // Show error message
+                        }
+                    })
+                    .catch(error => console.error('error: deleteItem(id): ', error));
             }
+
 
         </script>
 

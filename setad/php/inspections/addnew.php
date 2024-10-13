@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     try {
 
         // Database connection and page logic
-        include_once('php/db/config.php');
+        include_once 'php/db/config.php';
         mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
         // Create connection
