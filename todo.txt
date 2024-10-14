@@ -1,18 +1,18 @@
-[ ] enable 'حذف' in inspections list
-[ ] fetch from db and set dropdowns of 'استان', 'وضعیت' and 'تاریخ'...
-    [ ] ...also disable them when a ginle form of 12 forms has been submitted for this specific inspection
-[ ] in edit forms of inspections: pass inspection-id just as form-id in url
-[ ] enable submit of a sinle form (واحد بازرسی) in inspection forms of edit page
-[ ] enable 'ثبت' button in edit page of inspections
+[ok] enable 'حذف' in inspections list
+[  ] in edit inspection: fetch from db and set dropdowns of 'استان', 'وضعیت' and 'تاریخ'...
+    [  ] ...also disable them when a single form of 12 forms has been submitted for this specific inspection
+[ok] in edit forms of inspections: pass inspection-id just as form-id in url
+[->] enable submit of a sinle form (واحد بازرسی) in inspection forms of edit page
+[  ] enable 'ثبت' button in edit page of inspections
 ---------------------------
-[ ] do the same for form 1 ()
-[ ] do the same for form 1 ()
-[ ] do the same for form 1 ()
-[ ] do the same for form 1 ()
-[ ] do the same for form 1 ()
-[ ] do the same for form 1 ()
-[ ] do the same for form 1 ()
-[ ] do the same for form 1 ()
-[ ] do the same for form 1 ()
-[ ] do the same for form 1 ()
-[ ] do the same for form 1 ()
+[ ] carete the form and do the same for form 1 ()
+[ ] carete the form and do the same for form 2 ()
+[ ] carete the form and do the same for form 3 ()
+[ ] carete the form and do the same for form 4 ()
+[ ] carete the form and do the same for form 5 ()
+[ ] carete the form and do the same for form 6 ()
+[ ] carete the form and do the same for form 7 ()
+[ ] carete the form and do the same for form 8 ()
+[ ] carete the form and do the same for form 9 ()
+[ ] carete the form and do the same for form 10 ()
+[ ] carete the form and do the same for form 11 ()

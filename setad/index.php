@@ -37,22 +37,22 @@ session_start();
                         break;
 
                     case 'addnew':
-                        include_once('./php/inspections/addnew.php');
+                        include_once './php/inspections/addnew.php';
                         break;
 
                     case 'edit':
-                        include_once('./php/inspections/edit.php');
+                        include_once './php/inspections/edit.php';
                         break;
 
                     case 'editform':
 
-                        if (isset($_GET['id']))
-                            $id = $_GET['id'];
+                        if (isset($_GET['form_id']))
+                            $insp_id = $_GET['form_id'];
 
-                        switch ($id) {
+                        switch ($insp_id) {
                             case '5':
                                 // echo("<p>in line test</p>");
-                                include_once('./php/inspections/edit/e05-bazrasi.php');
+                                include_once './php/inspections/forms/f05-bazrasi.php';
                                 break;
                         }
 

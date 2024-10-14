@@ -128,19 +128,19 @@
                     if ($result->num_rows > 0) {
                         while ($row = $result->fetch_assoc()) {
 
-                            $id = $row['insp_id'];
+                            $insp_id = $row['insp_id'];
                             $date = $row['date_'];
                             $state = $row['state_name'];
                             $status = $row['status_desc'];
 
                             echo "
                     <tr>
-                        <td>$id</td>
+                        <td>$insp_id</td>
                         <td>$state</td>
                         <td>$date</td>
                         <td>$status</td>
-                        <td><a href=\"/setad/index.php?link=edit&id=$id\">ویرایش</a></td>
-                        <td><a href=\"#\" data-bs-toggle=\"modal\" data-bs-target=\"#confirmationModal\" data-id=\"$id\">حذف</a></td>
+                        <td><a href=\"/setad/index.php?link=edit&insp_id=$insp_id\">ویرایش</a></td>
+                        <td><a href=\"#\" data-bs-toggle=\"modal\" data-bs-target=\"#confirmationModal\" data-id=\"$insp_id\">حذف</a></td>
                     </tr>
                     ";
 

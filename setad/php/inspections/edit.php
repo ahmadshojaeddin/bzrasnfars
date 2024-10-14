@@ -155,6 +155,12 @@
 
 <div class="form-container">
 
+
+    <?php
+        $insp_id = isset($_GET['insp_id']) ? (int) $_GET['insp_id'] : 0;
+    ?>
+
+
     <form autocomplete="off">
 
         <div class="form-row">
@@ -224,7 +230,9 @@
             <tr>
                 <td>۵</td>
                 <td>ارزیابی عملکرد اداره نظارت و بازرسی</td>
-                <td><a href="index.php?link=editform&id=5">ویرایش</a></td>
+                <?php
+                echo "<td><a href=\"index.php?link=editform&form_id=5&insp_id=$insp_id\">ویرایش</a></td>"
+                    ?>
             </tr>
             <tr>
                 <td>۶</td>
