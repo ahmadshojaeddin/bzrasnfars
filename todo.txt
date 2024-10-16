@@ -1,9 +1,9 @@
 [ok] enable 'حذف' in inspections list
+[ok] in edit forms of inspections: pass inspection-id just as form-id in url
+[ok] enable submit of a sinle form (واحد بازرسی) in inspection forms of edit page
+[->] enable 'ثبت' button in edit page of inspections
 [  ] in edit inspection: fetch from db and set dropdowns of 'استان', 'وضعیت' and 'تاریخ'...
     [  ] ...also disable them when a single form of 12 forms has been submitted for this specific inspection
-[ok] in edit forms of inspections: pass inspection-id just as form-id in url
-[->] enable submit of a sinle form (واحد بازرسی) in inspection forms of edit page
-[  ] enable 'ثبت' button in edit page of inspections
 ---------------------------
 [ ] carete the form and do the same for form 1 ()
 [ ] carete the form and do the same for form 2 ()

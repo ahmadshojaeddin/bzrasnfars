@@ -214,6 +214,7 @@
                         }
                     })
                     .catch(error => console.error('error: deleteItem(id): ', error));
+                    
             }
 
 

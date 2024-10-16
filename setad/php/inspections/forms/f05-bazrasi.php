@@ -1,4 +1,133 @@
+<?php
+
+$shouldRedirectToInspectionsList = false;
+
+// Handle form submission for new entry
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    try {
+
+        // Database connection and page logic
+        // include_once '../php/db/config.php';
+        include_once '../../db/config.php';
+        mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
+        // Create connection
+        $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+        $conn->set_charset("utf8");
+
+        // $insp_id = isset($_GET['insp_id']) ? (int) $_GET['insp_id'] : 0;
+        $insp_id = $_POST['insp_id'];
+        $jsonString = $_POST['jsonString'];
+
+
+        // test
+        // $sql_debug = sprintf(
+        //     "UPDATE setad.inspections SET f05_bazrasi_json='%s' WHERE id=%d;",
+        //     $conn->real_escape_string($jsonString),
+        //     (int)$insp_id
+        // );
+        // echo "Debug SQL: " . $sql_debug;
+        // ----
+
+
+        // update jsonString in the inspections table
+        // $stmt = $conn->prepare("UPDATE setad.inspections f05_bazrasi_json=? WHERE id=?;");
+        $stmt = $conn->prepare("UPDATE setad.inspections SET f05_bazrasi_json=? WHERE id=?;");
+        $stmt->bind_param("si", $jsonString, $insp_id);
+        $stmt->execute();
+        $stmt->close();
+        $conn->close();
+
+        // echo "<p>اطلاعات با موفقیت ذخیره شد.</p>";
+        // $shouldRedirectToInspectionsList = true;
+
+        // Redirect or output a success message
+        echo json_encode(['success' => true, 'message' => 'فرم ثبت شد']);
+        exit();
+
+    } catch (mysqli_sql_exception $e) {
+
+        echo json_encode(['success' => false, 'message' => 'Error: ' . $e->getMessage()]);
+        exit();
+
+    }
+
+}
+
+?>
+
+<?php
+
+try {
+
+    // Database connection and page logic
+    // include_once '../php/db/config.php';
+    include_once 'php/db/config.php';
+    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
+    // Create connection
+    $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    $conn->set_charset("utf8");
+
+    $insp_id = isset($_GET['insp_id']) ? (int) $_GET['insp_id'] : 0;
+    $jsonString = '{}';
+
+
+    // test
+    // $sql_debug = sprintf(
+    //     "UPDATE setad.inspections SET f05_bazrasi_json='%s' WHERE id=%d;",
+    //     $conn->real_escape_string($jsonString),
+    //     (int)$insp_id
+    // );
+    // echo "Debug SQL: " . $sql_debug;
+    // ----
+
+
+    // update jsonString in the inspections table
+    // $stmt = $conn->prepare("UPDATE setad.inspections f05_bazrasi_json=? WHERE id=?;");
+    $stmt = $conn->prepare("SELECT f05_bazrasi_json from setad.inspections WHERE id=?;");
+    $stmt->bind_param("i", $insp_id);
+    $stmt->execute();
+
+
+    // Bind the result to $jsonString
+    $stmt->bind_result($jsonString);
+
+    // Fetch the result into the $jsonString variable
+    if (!$stmt->fetch()) {
+        $jsonString = "error: No result found for id: " . $insp_id;
+    }
+
+
+    $stmt->close();
+    $conn->close();
+
+
+} catch (mysqli_sql_exception $e) {
+
+    echo "<script>alert(" . $e->getMessage() . ");</script>";
+    exit();
+
+}
+
+?>
+
+
+<script>
+    // let shouldRedirect = <?php echo json_encode($shouldRedirectToInspectionsList); ?>;
+    // if (shouldRedirect) {
+    //     // Redirect to the target URL
+    //     // tempo commented:
+    //     // window.location.href = 'http://localhost/setad/index.php?link=list';
+    // }
+</script>
+
+
+
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عملکرد اداره نظارت و بازرسی</title>
@@ -13,6 +142,144 @@
             margin-right: 1.5em;
         }
     </style>
+
+
+    <script type="text/javascript">
+
+
+        // جمع آوری داده ها از فرم و تبدیل به جیسون
+
+        function packFormDataToJson() {
+
+            // Prevent the form from submitting
+            event.preventDefault();
+
+            const form = document.getElementById('myForm');
+            const formData = new FormData(form);
+            const formObject = {};
+            // alert('form: ' + form);
+            // alert('formData: ' + formData);
+
+            // Loop through all form data and build an object
+            formData.forEach((value, key) => {
+                // alert('key: ' + key + 'value: ' + value);
+                if (!formObject[key]) {
+                    formObject[key] = value;
+                } else {
+                    // Handle multiple input fields with the same name (e.g., radio buttons)
+                    if (!Array.isArray(formObject[key])) {
+                        formObject[key] = [formObject[key]];
+                    }
+                    formObject[key].push(value);
+                }
+            });
+
+            // Convert the object to a JSON string
+            const jsonString = JSON.stringify(formObject);
+            // console.log(jsonString); // For debugging; remove this in production
+            // alert('packFormDataToJson() called.\njson: ' + jsonString);
+            submit_json(jsonString);
+
+            // // You can store the JSON string in a hidden input to be sent with the form
+            // const hiddenInput = document.createElement('input');
+            // hiddenInput.type = 'hidden';
+            // hiddenInput.name = 'json_data'; // Change the name as needed
+            // hiddenInput.value = jsonString;
+            // form.appendChild(hiddenInput);
+
+        }
+
+
+        function submit_json(jsonString) {
+
+            // Create a form and submit it using fetch to the current URL
+            // fetch('/setad/php/inspections/delete.php', {
+
+            let insp_id = <?php echo isset($_GET['insp_id']) ? (int) $_GET['insp_id'] : 0; ?>;
+            // alert(insp_id);
+
+            fetch('/setad/php/inspections/forms/f05-bazrasi.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({
+                    'insp_id': insp_id,
+                    'jsonString': jsonString // Send jsonString as a POST parameter
+                })
+                // body: {
+                //     'insp_id': insp_id,
+                //     'jsonString': jsonString // Send jsonString as a POST parameter
+                // }
+            }).then(response => response.text()) // Get the raw response text
+                .then(text => {
+                    try {
+                        // Try parsing the text as JSON
+                        const data = JSON.parse(text);
+                        if (data.success) {
+                            alert(data.message); // Show success message
+                            window.location.href = window.location.href; // Redirect to the inspections list page
+                        } else {
+                            alert(data.message); // Show error message
+                        }
+                    } catch (error) {
+                        // Log the raw text for debugging
+                        console.error('Response is not valid JSON:', text);
+                        alert('Error: ' + text); // Show the raw response to the user
+                    }
+                })
+                .catch(error => console.error('Fetch error:', error));
+
+            // alert('posted!');
+
+        }
+
+
+
+
+        // توزیع داده ها از جیسون به المنت های روی فرم
+
+        // Function to populate the form with values from JSON string
+        function populateForm(jsonString) {
+
+            // alert('populateForm(jsonString) called!\njson: ' + jsonString);
+            // Parse the JSON string
+            const formData = JSON.parse(jsonString);
+
+            // Loop through each key in the object
+            for (let key in formData) {
+                // Find the input element using the key as the name attribute
+                let inputElement = document.querySelector(`[name="${key}"]`);
+
+                if (inputElement) {
+                    // Check if it's a radio button or checkbox
+                    if (inputElement.type === "radio" || inputElement.type === "checkbox") {
+                        let value = formData[key];
+                        let radioElement = document.querySelector(`[name="${key}"][value="${value}"]`);
+                        if (radioElement) {
+                            radioElement.checked = true;
+                        }
+                    }
+                    // Check if it's a textarea
+                    else if (inputElement.tagName === "TEXTAREA") {
+                        inputElement.value = formData[key];
+                    }
+                    // Handle regular input types (text, number, etc.)
+                    else {
+                        inputElement.value = formData[key];
+                    }
+                }
+            }
+        }
+
+        // Example of how to use the populateForm function
+        // let jsonString = '{"general_practitioner_centers":"5","specialist_centers":"10","participation":"yes"}';
+        // populateForm(jsonString); // Pass the JSON string here
+
+    </script>
+
+
+
 </head>
 
 <div class="row">
@@ -446,169 +713,23 @@
 </div> <!-- end of row -->
 
 
-
-<!-- جمع آوری داده ها از فرم و تبدیل به جیسون -->
 <script>
 
-    function packFormDataToJson() {
+    // let jsonString = <?php echo $jsonString; ?>;
+    let jsonString = <?php echo json_encode($jsonString); ?>;
+    // alert(jsonString);
+    populateForm(jsonString);
 
-        // Prevent the form from submitting
-        event.preventDefault();
+    // NOT WORKING!
 
-        const form = document.getElementById('myForm');
-        const formData = new FormData(form);
-        const formObject = {};
-        // alert('form: ' + form);
-        // alert('formData: ' + formData);
-
-        // Loop through all form data and build an object
-        formData.forEach((value, key) => {
-            // alert('key: ' + key + 'value: ' + value);
-            if (!formObject[key]) {
-                formObject[key] = value;
-            } else {
-                // Handle multiple input fields with the same name (e.g., radio buttons)
-                if (!Array.isArray(formObject[key])) {
-                    formObject[key] = [formObject[key]];
-                }
-                formObject[key].push(value);
-            }
-        });
-
-        // Convert the object to a JSON string
-        const jsonString = JSON.stringify(formObject);
-        // console.log(jsonString);  // For debugging; remove this in production
-        alert('packFormDataToJson() called.\njson: ' + jsonString);
-
-        // // You can store the JSON string in a hidden input to be sent with the form
-        // const hiddenInput = document.createElement('input');
-        // hiddenInput.type = 'hidden';
-        // hiddenInput.name = 'json_data'; // Change the name as needed
-        // hiddenInput.value = jsonString;
-        // form.appendChild(hiddenInput);
-
-    }
-</script>
-
-
-
-<!-- توزیع داده ها از جیسون به المنت های روی فرم -->
-<script>
-    // Function to populate the form with values from JSON string
-    function populateForm(jsonString) {
-
-        alert('populateForm(jsonString) called!\njson: ' + jsonString);
-        // Parse the JSON string
-        const formData = JSON.parse(jsonString);
-
-        // Loop through each key in the object
-        for (let key in formData) {
-            // Find the input element using the key as the name attribute
-            let inputElement = document.querySelector(`[name="${key}"]`);
-
-            if (inputElement) {
-                // Check if it's a radio button or checkbox
-                if (inputElement.type === "radio" || inputElement.type === "checkbox") {
-                    let value = formData[key];
-                    let radioElement = document.querySelector(`[name="${key}"][value="${value}"]`);
-                    if (radioElement) {
-                        radioElement.checked = true;
-                    }
-                }
-                // Check if it's a textarea
-                else if (inputElement.tagName === "TEXTAREA") {
-                    inputElement.value = formData[key];
-                }
-                // Handle regular input types (text, number, etc.)
-                else {
-                    inputElement.value = formData[key];
-                }
-            }
-        }
-    }
-
-    // Example of how to use the populateForm function
-    // let jsonString = '{"general_practitioner_centers":"5","specialist_centers":"10","participation":"yes"}';
-    // populateForm(jsonString); // Pass the JSON string here
-
-</script>
-
-
-
-
-
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-<!-- GPT Sample Code for using js-fetch/PHP to send retrive json to a php -->
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
-
-<!-- js-fetch -->
-<!-- <form id="myForm">
-    <input type="text" name="general_practitioner_centers" value="5">
-    <input type="text" name="hospital_centers" value="10">
-    <button type="submit">Submit</button>
-</form> -->
-
-<script>
-    // // This function collects form data and converts it to JSON
-    // function packFormDataToJson(form) {
-    //     const formData = new FormData(form);
-    //     const formObject = {};
-
-    //     // Create JSON object from form data
-    //     formData.forEach((value, key) => {
-    //         formObject[key] = value;
-    //     });
-
-    //     return JSON.stringify(formObject); // Convert object to JSON string
-    // }
+    // alert('hey!');
 
     // document.getElementById('myForm').addEventListener('submit', function (event) {
-    //     event.preventDefault(); // Prevent the form from submitting normally
 
-    //     const form = event.target; // Get the form element
-    //     const jsonString = packFormDataToJson(form); // Convert form data to JSON
+    //     alert('yoohoo!');
 
-    //     // Send the JSON data to a PHP file using fetch
-    //     fetch('your_php_file.php', {
-    //         method: 'POST',
-    //         headers: {
-    //             'Content-Type': 'application/json', // Set content type to JSON
-    //         },
-    //         body: jsonString // Send JSON data in the request body
-    //     })
-    //         .then(response => response.json()) // Assuming the PHP file returns JSON
-    //         .then(data => {
-    //             console.log('Success:', data);
-    //             // Handle success, e.g., update UI or show a success message
-    //         })
-    //         .catch(error => {
-    //             console.error('Error:', error);
-    //             // Handle error, e.g., show error message to user
-    //         });
+    //     // event.preventDefault(); // Prevent the form from submitting normally
+    //     // packFormDataToJson();
     // });
+
 </script>
-
-
-
-<!-- php -->
-<?php
-// // Read the raw POST data
-// $json_data = file_get_contents('php://input');
-
-// // Decode the JSON to an associative array
-// $data = json_decode($json_data, true);
-
-// // Now you can access the form data like this:
-// $general_practitioner_centers = $data['general_practitioner_centers'];
-// $hospital_centers = $data['hospital_centers'];
-
-// // Process the data as needed, e.g., store it in a database
-
-// // Send a JSON response back to JavaScript
-// echo json_encode([
-//     'status' => 'success',
-//     'message' => 'Data processed successfully'
-// ]);
-?>
