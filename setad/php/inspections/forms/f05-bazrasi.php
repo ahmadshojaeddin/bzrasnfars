@@ -1,6 +1,6 @@
 <?php
 
-$shouldRedirectToInspectionsList = false;
+// $shouldRedirectToInspectionsList = false;
 
 // Handle form submission for new entry
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {

@@ -1,3 +1,48 @@
+<?php
+
+// $shouldRedirectToInspectionsList = false;
+
+// Handle form submission for new entry
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    try {
+
+        // Database connection and page logic
+        include_once '../db/config.php';
+        mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
+        // Create connection
+        $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+        $conn->set_charset("utf8");
+
+        $insp_id = $_POST['insp_id'];
+        $date_ = $_POST['date_'];
+        $state_code = $_POST['state_code'];
+        $status_code = $_POST['status_code'];
+
+        // update jsonString in the inspections table
+        $stmt = $conn->prepare("UPDATE setad.inspections SET date_=?, state_code=?, status_code=? WHERE id=?;");
+        $stmt->bind_param("siii", $date_, $state_code, $status_code, $insp_id);
+        $stmt->execute();
+        $stmt->close();
+        $conn->close();
+
+        // Redirect or output a success message
+        echo json_encode(['success' => true, 'message' => 'تغییرات اعمال شد']);
+        exit();
+
+    } catch (mysqli_sql_exception $e) {
+
+        echo json_encode(['success' => false, 'message' => 'Error: ' . $e->getMessage()]);
+        exit();
+
+    }
+
+}
+
+?>
+
+
 <head>
 
     <style>
@@ -103,12 +148,10 @@
     <link rel="stylesheet" href="lib/provincedropdown/provincedropdown.css" />
 
 
-
-
     <!-- Jalali Calendar -->
-
     <script src="lib/jalalidatepicker/jalalidatepicker.min.js"></script>
     <link rel="stylesheet" href="lib/jalalidatepicker/jalalidatepicker.min.css" />
+
 
     <style>
         select,
@@ -155,11 +198,53 @@
 
 <div class="form-container">
 
+    <script>
 
-    <?php
-        $insp_id = isset($_GET['insp_id']) ? (int) $_GET['insp_id'] : 0;
-    ?>
+        function submit_edit() {
 
+            // Prevent the form from submitting
+            event.preventDefault();
+
+            let insp_id = <?php echo isset($_GET['insp_id']) ? (int) $_GET['insp_id'] : 0; ?>;
+            let date_ = document.getElementById('date').value;  // Set date
+            let state_code = document.getElementById('province').value;  // Set state code (province)
+            let status_code = document.getElementById('status').value;  // Set status code
+
+            alert(insp_id + ',' + date_ + ',' + state_code + ',' + status_code);
+
+            fetch('/setad/php/inspections/edit.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams({
+                    'insp_id': insp_id,
+                    'date_': date_,
+                    'state_code': state_code,
+                    'status_code': status_code
+                })
+            }).then(response => response.text()) // Get the raw response text
+                .then(text => {
+                    try {
+                        // Try parsing the text as JSON
+                        const data = JSON.parse(text);
+                        if (data.success) {
+                            alert(data.message); // Show success message
+                            window.location.href = window.location.href; // Redirect to the inspections list page
+                        } else {
+                            alert(data.message); // Show error message
+                        }
+                    } catch (error) {
+                        // Log the raw text for debugging
+                        console.error('Response is not valid JSON:', text);
+                        alert('Error: ' + text); // Show the raw response to the user
+                    }
+                })
+                .catch(error => console.error('Fetch error:', error));
+
+        }
+
+    </script>
 
     <form autocomplete="off">
 
@@ -176,8 +261,8 @@
 
             <label for="status">وضعیت:</label>
             <select id="status" name="status">
-                <option value="pending">در دست اقدام</option>
-                <option value="completed">تکمیل شده</option>
+                <option value="1">در دست اقدام</option>
+                <option value="2">تکمیل شده</option>
             </select>
 
             <!-- <label for="date">تاریخ:</label>
@@ -188,13 +273,65 @@
                 jalaliDatepicker.startWatch({});
             </script>
 
-            <button type="submit" style="border-radius: 0px !important;">ثبت</button>
+            <button type="submit" style="border-radius: 0px !important;" onclick="submit_edit()">ثبت</button>
 
         </div>
 
     </form>
 
+
+    <?php
+
+    $insp_id = isset($_GET['insp_id']) ? (int) $_GET['insp_id'] : 0;
+    $date_ = '';
+    $state_code = 0;
+    $status_code = 0;
+
+    try {
+
+        // Database connection and page logic
+        // include_once '../php/db/config.php';
+        include_once 'db/config.php';
+        mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
+        // Create connection
+        $conn = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+        $conn->set_charset("utf8");
+
+        $stmt = $conn->prepare("SELECT date_, state_code, status_code from setad.inspections WHERE id=?;");
+        $stmt->bind_param("i", $insp_id);
+        $stmt->execute();
+
+        // Bind the result to $jsonString
+        $stmt->bind_result($date_, $state_code, $status_code);
+
+        // Fetch the result into the $jsonString variable
+        if (!$stmt->fetch()) {
+            echo "error: No result found for id: " . $insp_id;
+        } // else {
+        //     echo 'result: ' . $insp_id . ' , ' . $date_ . ' , ' . $state_code . ' , ' . $status_code;
+        // }
+    
+        $stmt->close();
+        $conn->close();
+
+
+    } catch (mysqli_sql_exception $e) {
+
+        echo json_encode(['success' => false, 'message' => 'Error: ' . $e->getMessage()]);
+        exit();
+
+    }
+
+
+
+    ?>
+
+
 </div>
+
+
+
 
 <div class="table-container">
 
@@ -282,3 +419,41 @@
     <a href="index.php" class="back-button" onclick="returnToInspectionsList()">بازگشت</a>
 
 </div>
+
+
+
+
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+
+        let insp_id = <?php echo $insp_id; ?>;
+        let date_ = "<?php echo $date_; ?>"; // Ensure it's treated as a string
+        let state_code = <?php echo $state_code; ?>;
+        // alert(typeof state_code);
+        let status_code = <?php echo $status_code; ?>;
+
+        // let provinces = '';
+        // Array.from(document.getElementById('province').options).forEach((option, index) => {
+        //     provinces += `Index ${index}: Value = ${option.value}, Text = ${option.text}` + '\n';
+        // });
+        // alert(provinces);
+
+        // alert(insp_id + ' , ' + date_ + ' , ' + state_code + ' , ' + status_code);
+
+        if (date_ !== '') {
+
+            document.getElementById('date').value = date_;  // Set date
+            document.getElementById('province').value = state_code;  // Set state code (province)
+            document.getElementById('status').value = status_code;  // Set status code
+
+        } else {
+
+            alert('بازرسی ای با کدخطای برنامه:  ' + insp_id + ' در دیتابیس پیدا نشد');
+
+        }
+
+    });
+
+</script>
