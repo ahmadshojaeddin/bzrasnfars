@@ -22,7 +22,7 @@ session_start();
             <?php
 
             // phpinfo();
-
+            
             $link = '';
 
             if (isset($_GET['link'])) {
@@ -68,7 +68,9 @@ session_start();
 
         </div>
 
-        <?php include_once('php/footer.php'); ?>
+        <div>
+            <?php include_once('php/footer.php'); ?>
+        </div>
 
     </div>
 

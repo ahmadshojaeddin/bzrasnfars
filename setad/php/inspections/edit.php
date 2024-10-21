@@ -210,9 +210,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             let state_code = document.getElementById('province').value;  // Set state code (province)
             let status_code = document.getElementById('status').value;  // Set status code
 
-            alert(insp_id + ',' + date_ + ',' + state_code + ',' + status_code);
+            // alert(insp_id + ',' + date_ + ',' + state_code + ',' + status_code);
 
             fetch('/setad/php/inspections/edit.php', {
+
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
@@ -223,7 +224,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     'state_code': state_code,
                     'status_code': status_code
                 })
+
             }).then(response => response.text()) // Get the raw response text
+
                 .then(text => {
                     try {
                         // Try parsing the text as JSON
@@ -347,7 +350,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <tr>
                 <td>۱</td>
                 <td>ارزیابی عملکرد اداره رتبه‌بندی فراهم‌کنندگان خدمات و خرید راهبردی</td>
-                <td><a href="#">ویرایش</a></td>
+                <?php
+                echo "<td><a href=\"index.php?link=editform&form_id=1&insp_id=$insp_id\">ویرایش</a></td>"
+                    ?>
             </tr>
             <tr>
                 <td>۲</td>

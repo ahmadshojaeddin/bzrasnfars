@@ -50,8 +50,10 @@ session_start();
                             $insp_id = $_GET['form_id'];
 
                         switch ($insp_id) {
+                            case '1':
+                                include_once './php/inspections/forms/f01-rotbeh.php';
+                                break;
                             case '5':
-                                // echo("<p>in line test</p>");
                                 include_once './php/inspections/forms/f05-bazrasi.php';
                                 break;
                         }
@@ -76,7 +78,7 @@ session_start();
 
         </div>
 
-        <div class="p-0" style="padding:0;">
+        <div class="p-0 m-0" style="padding:0px; margin:0px;">
             <?php include_once './php/footer.php'; ?>
         </div>
 
