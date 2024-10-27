@@ -357,17 +357,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <tr>
                 <td>۲</td>
                 <td>ارزیابی عملکرد کمیته فنی</td>
-                <td><a href="#">ویرایش</a></td>
+                <?php
+                echo "<td><a href=\"index.php?link=editform&form_id=2&insp_id=$insp_id\">ویرایش</a></td>"
+                    ?>
             </tr>
             <tr>
                 <td>۳</td>
                 <td>ارزیابی عملکرد شورای علمی تخصصی</td>
-                <td><a href="#">ویرایش</a></td>
+                <?php
+                echo "<td><a href=\"index.php?link=editform&form_id=3&insp_id=$insp_id\">ویرایش</a></td>"
+                    ?>
             </tr>
             <tr>
                 <td>۴</td>
                 <td>ارزیابی عملکرد شوراها و کمیته‌های مشترک استانی با سایر سازمان‌ها</td>
-                <td><a href="#">ویرایش</a></td>
+                <?php
+                echo "<td><a href=\"index.php?link=editform&form_id=4&insp_id=$insp_id\">ویرایش</a></td>"
+                    ?>
             </tr>
             <tr>
                 <td>۵</td>
@@ -378,38 +384,52 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </tr>
             <tr>
                 <td>۶</td>
-                <td>ارزیابی عملکرد واحد رسیدگی صورت‌حساب‌ها</td>
-                <td><a href="#">ویرایش</a></td>
+                <td>ارزیابی عملکرد واحد رسیدگی صورتحساب‌های پزشکان، دندانپزشکان و درمانگاه‌ها</td>
+                <?php
+                echo "<td><a href=\"index.php?link=editform&form_id=6&insp_id=$insp_id\">ویرایش</a></td>"
+                    ?>
             </tr>
             <tr>
                 <td>۷</td>
-                <td>ارزیابی عملکرد واحد رسیدگی صورت‌حساب‌های پزشکان</td>
-                <td><a href="#">ویرایش</a></td>
+                <td>ارزیابی عملکرد واحد رسیدگی صورتحساب‌های داروخانه‌ها</td>
+                <?php
+                echo "<td><a href=\"index.php?link=editform&form_id=7&insp_id=$insp_id\">ویرایش</a></td>"
+                    ?>
             </tr>
             <tr>
                 <td>۸</td>
-                <td>ارزیابی عملکرد واحد رسیدگی صورت‌حساب‌های دندانپزشکان و درمانگاه‌ها</td>
-                <td><a href="#">ویرایش</a></td>
+                <td>ارزیابی عملکرد واحد رسیدگی صورتحساب‌های مؤسسات پاراکلینیک</td>
+                <?php
+                echo "<td><a href=\"index.php?link=editform&form_id=8&insp_id=$insp_id\">ویرایش</a></td>"
+                    ?>
             </tr>
             <tr>
                 <td>۹</td>
-                <td>ارزیابی عملکرد واحد رسیدگی صورت‌حساب‌های داروخانه‌ها</td>
-                <td><a href="#">ویرایش</a></td>
+                <td>ارزیابی عملکرد واحد ناظرین بیمارستانی</td>
+                <?php
+                echo "<td><a href=\"index.php?link=editform&form_id=9&insp_id=$insp_id\">ویرایش</a></td>"
+                    ?>
             </tr>
             <tr>
                 <td>۱۰</td>
-                <td>ارزیابی عملکرد واحد رسیدگی صورت‌حساب‌های مراکز جراحی محدود</td>
-                <td><a href="#">ویرایش</a></td>
+                <td>ارزیابی عملکرد واحد رسیدگی صورتحساب‌های بیمارستانی و مراکز جراحی محدود</td>
+                <?php
+                echo "<td><a href=\"index.php?link=editform&form_id=10&insp_id=$insp_id\">ویرایش</a></td>"
+                    ?>
             </tr>
             <tr>
                 <td>۱۱</td>
-                <td>ارزیابی عملکرد واحد رسیدگی صورت‌حساب‌های خسارت متفرقه</td>
-                <td><a href="#">ویرایش</a></td>
+                <td>ارزیابی عملکرد واحد رسیدگی صورتحساب‌های خسارت متفرقه</td>
+                <?php
+                echo "<td><a href=\"index.php?link=editform&form_id=11&insp_id=$insp_id\">ویرایش</a></td>"
+                    ?>
             </tr>
             <tr>
                 <td>۱۲</td>
                 <td>ارزیابی عملکرد اداره امور مالی و ممیزی</td>
-                <td><a href="#">ویرایش</a></td>
+                <?php
+                echo "<td><a href=\"index.php?link=editform&form_id=12&insp_id=$insp_id\">ویرایش</a></td>"
+                    ?>
             </tr>
         </tbody>
     </table>

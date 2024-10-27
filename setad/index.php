@@ -53,8 +53,38 @@ session_start();
                             case '1':
                                 include_once './php/inspections/forms/f01-rotbeh.php';
                                 break;
+                            case '2':
+                                include_once './php/inspections/forms/f02-komitehfanni.php';
+                                break;
+                            case '3':
+                                include_once './php/inspections/forms/f03-elmitakhassosi.php';
+                                break;
+                            case '4':
+                                include_once './php/inspections/forms/f04-komitehostani.php';
+                                break;
                             case '5':
                                 include_once './php/inspections/forms/f05-bazrasi.php';
+                                break;
+                            case '6':
+                                include_once './php/inspections/forms/f06-pezeshkan.php';
+                                break;
+                            case '7':
+                                include_once './php/inspections/forms/f07-darukhaneh.php';
+                                break;
+                            case '8':
+                                include_once './php/inspections/forms/f08-paraclinic.php';
+                                break;
+                            case '9':
+                                include_once './php/inspections/forms/f09-nazerbimarestani.php';
+                                break;
+                            case '10':
+                                include_once './php/inspections/forms/f10-bimarestani.php';
+                                break;
+                            case '11':
+                                include_once './php/inspections/forms/f11-khesarat.php';
+                                break;
+                            case '12':
+                                include_once './php/inspections/forms/f12-mali.php';
                                 break;
                         }
 

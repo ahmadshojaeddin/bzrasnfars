@@ -152,6 +152,11 @@ try {
             height: 80px;
             margin-top: 10px;
         }
+        
+        input[type="text"] {
+            border-width: 1px;
+        }
+
     </style>
 
 
