@@ -21,8 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $jsonString = $_POST['jsonString'];
 
         // update jsonString in the inspections table
-        // $stmt = $conn->prepare("UPDATE setad.inspections f05_bazrasi_json=? WHERE id=?;");
-        $stmt = $conn->prepare("UPDATE setad.inspections SET f05_bazrasi_json=? WHERE id=?;");
+        $stmt = $conn->prepare("UPDATE setad.inspections SET f09_nazerbimarestani_json=? WHERE id=?;");
         $stmt->bind_param("si", $jsonString, $insp_id);
         $stmt->execute();
         $stmt->close();
@@ -67,8 +66,7 @@ try {
 
 
     // update jsonString in the inspections table
-    // $stmt = $conn->prepare("SELECT f05_bazrasi_json from setad.inspections WHERE id=?;");
-    $stmt = $conn->prepare("SELECT f05_bazrasi_json, st.name_ as state_name, date_, insst.desc_ as status_desc 
+    $stmt = $conn->prepare("SELECT f09_nazerbimarestani_json, st.name_ as state_name, date_, insst.desc_ as status_desc 
         FROM setad.inspections AS ins
         LEFT OUTER JOIN setad.states AS st ON ins.state_code = st.id
         LEFT OUTER JOIN setad.inspection_status AS insst ON ins.status_code = insst.id
@@ -221,7 +219,7 @@ try {
 
             let insp_id = <?php echo isset($_GET['insp_id']) ? (int) $_GET['insp_id'] : 0; ?>;
 
-            fetch('/setad/php/inspections/forms/f05-bazrasi.php', {
+            fetch('/setad/php/inspections/forms/f09-nazerbimarestani.php', {
 
                 method: 'POST',
                 headers: {
