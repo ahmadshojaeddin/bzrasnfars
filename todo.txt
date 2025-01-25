@@ -4,17 +4,17 @@
 [ok] in edit inspection: fetch from db and set dropdowns of 'استان', 'وضعیت' and 'تاریخ'...
     [  ] ...also disable them when a single form of 12 forms has been submitted for this specific inspection
 [ok] enable 'ثبت' button in edit page of inspections
-[  ] place a titr text to fetch from db and show State nanme and Date above each of 12 forms
-[  ] place 'بازگشت' and 'ثبت و بازگشت' below all 12 forms
+[ok] place a titr text to fetch from db and show State nanme and Date above each of 12 forms
+[ok] place 'بازگشت' and 'ثبت و بازگشت' below all 12 forms
 ---------------------------
-[ ] carete the form and do the same for form 1 ()
-[ ] carete the form and do the same for form 2 ()
-[ ] carete the form and do the same for form 3 ()
-[ ] carete the form and do the same for form 4 ()
-[ ] carete the form and do the same for form 5 ()
-[ ] carete the form and do the same for form 6 ()
-[ ] carete the form and do the same for form 7 ()
-[ ] carete the form and do the same for form 8 ()
-[ ] carete the form and do the same for form 9 ()
-[ ] carete the form and do the same for form 10 ()
-[ ] carete the form and do the same for form 11 ()
+[ok] carete the form and do the same for form 1 ()
+[ok] carete the form and do the same for form 2 ()
+[ok] carete the form and do the same for form 3 ()
+[ok] carete the form and do the same for form 4 ()
+[ok] carete the form and do the same for form 5 ()
+[ok] carete the form and do the same for form 6 ()
+[ok] carete the form and do the same for form 7 ()
+[ok] carete the form and do the same for form 8 ()
+[ok] carete the form and do the same for form 9 ()
+[ok] carete the form and do the same for form 10 ()
+[ok] carete the form and do the same for form 11 ()

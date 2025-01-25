@@ -36,6 +36,8 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="/setad/index.php?link=list">بازرسی استان ها</a></li>
+                            <li><a class="dropdown-item" href="/setad/index.php?link=schedule">برنامه زمانبندی</a></li>
+                            <li><a class="dropdown-item" href="/setad/index.php?link=score">جدول امتیاز دهی</a></li>
                         </ul>
                     </li>
 

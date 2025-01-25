@@ -48,7 +48,7 @@
 
     <div class="col-8">
 
-        <h1 style="padding: 20px;">بازرسی استان ها</h1>
+        <h1 style="padding: 20px;">جدول امتیاز دهی</h1>
 
         <div class="button-container">
             <button class="button" onclick="window.location.href = '/setad/index.php?link=addnew';">جدید</button>
@@ -78,7 +78,7 @@
                 <tr>
                     <th>شماره</th>
                     <th>استان</th>
-                    <th>تاریخ</th>
+                    <th>امتیاز</th>
                     <th>وضعیت</th>
                     <th></th>
                     <th></th>

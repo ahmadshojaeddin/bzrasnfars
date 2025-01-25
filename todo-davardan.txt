@@ -1,0 +1,18 @@
+todo:
+1- takmil form 7 darooei
+2- form 13 chalesh-ha
+3- eslahe salha be hasabe sale bazresi
+4- report generator > pdf baraye ostan
+5- do not allow change state/date after first form record
+6- users and rols
+-------------------
+7- forme barnameh rizi [ok]
+	- one dynamic list containing
+		1- done
+		2- scheduled
+		3- filters: done/undone/over-all/both
+		* schedule date
+		* done date
+8- forme emtiazdehi
+9- ghalebe nameheye pasokhe ostan be modirkol
+10- field names in forms

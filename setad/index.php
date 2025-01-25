@@ -24,13 +24,21 @@ session_start();
                 <?php
 
                 // phpinfo();
-                
+
                 $link = '';
 
                 if (isset($_GET['link']))
                     $link = $_GET['link'];
 
                 switch ($link) {
+
+                    case 'score':
+                        include_once('./php/score/score.php');
+                        break;
+
+                    case 'schedule':
+                        include_once('./php/schedule/schedule.php');
+                        break;
 
                     case 'list':
                         include_once('./php/inspections/list.php');
