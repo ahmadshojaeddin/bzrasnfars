@@ -33,14 +33,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Redirect or output a success message
         echo json_encode(['success' => true, 'message' => 'فرم ثبت شد']);
         exit();
-
     } catch (mysqli_sql_exception $e) {
 
         echo json_encode(['success' => false, 'message' => 'Error: ' . $e->getMessage()]);
         exit();
-
     }
-
 }
 
 ?>
@@ -87,13 +84,10 @@ try {
 
     $stmt->close();
     $conn->close();
-
-
 } catch (mysqli_sql_exception $e) {
 
     echo "<script>alert(" . $e->getMessage() . ");</script>";
     exit();
-
 }
 
 ?>
@@ -156,7 +150,6 @@ try {
 
 
     <script type="text/javascript">
-
         function save(showAlert = true) {
 
             // Prevent the form from submitting
@@ -221,16 +214,16 @@ try {
 
             fetch('/setad/php/inspections/forms/f07-darukhaneh.php', {
 
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                },
-                body: new URLSearchParams({
-                    'insp_id': insp_id,
-                    'jsonString': jsonString // Send jsonString as a POST parameter
-                })
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    body: new URLSearchParams({
+                        'insp_id': insp_id,
+                        'jsonString': jsonString // Send jsonString as a POST parameter
+                    })
 
-            }).then(response => response.text()) // Get the raw response text
+                }).then(response => response.text()) // Get the raw response text
 
                 .then(text => {
                     try {
@@ -292,7 +285,6 @@ try {
                 }
             }
         }
-
     </script>
 
 
@@ -701,22 +693,182 @@ try {
                 </div>
 
                 <!-- Question 10 -->
-                <br>
-                <br>
+                <br />
+                <br />
                 <div>
                     <label for="q10_comments">10- ارزیابی سوابق بیماران دارای پرونده دارویی و نسخ دارویی:</label>
-                    br>نسخ ثبت شده و مدارک و مستندات بیماران پرونده‌ای در سیستم جامع اسناد پزشکی و پورتال معاونت درمان
+                    <br />نسخ ثبت شده و مدارک و مستندات بیماران پرونده‌ای در سیستم جامع اسناد پزشکی و پورتال معاونت درمان
                     با روش نمونه‌گیری تصادفی مورد بررسی قرار گرفت. برخی مشاهدات به عنوان نمونه به شرح زیر می‌باشد:</p>
+
+
+
+                    <!-- Question 10-1 -->
+                    <br />
+                    <br />
+                    <div class="form-group">
+                        <label>1) بررسی نسخ و پرونده بیماران داروی آدالیمومب (سینورا) (کد 16164):</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="participation" id="sinora_yes"
+                                value="yes">
+                            <label class="form-check-label" for="sinora_yes">
+                                در بررسی داروی آدالیمومب (سینورا)، مورد خاصی مشاهده نگردید.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="participation" id="sinora_no"
+                                value="no">
+                            <label class="form-check-label" for="sinora_no">
+                                در بررسی داروی آدالیمومب (سینورا)، موارد زیر مشاهده گردید:
+                            </label>
+                        </div>
+                    </div>
+
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ردیف</th>
+                                <th>کد ملی بیمار</th>
+                                <th>نام پزشک</th>
+                                <th>نظام پزشکی</th>
+                                <th>تخصص</th>
+                                <th>توضیحات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><input type="text" name="code_melli1_sinora" class="form-control"></td>
+                                <td><input type="text" name="dr_name1_sinora" class="form-control"></td>
+                                <td><input type="text" name="dr_nezam1_sinora" class="form-control"></td>
+                                <td><input type="text" name="dr_special1_sinora" class="form-control"></td>
+                                <td><input type="text" name="desc1_sinora" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><input type="text" name="code_melli2_sinora" class="form-control"></td>
+                                <td><input type="text" name="dr_name2_sinora" class="form-control"></td>
+                                <td><input type="text" name="dr_nezam2_sinora" class="form-control"></td>
+                                <td><input type="text" name="dr_special2_sinora" class="form-control"></td>
+                                <td><input type="text" name="desc2_sinora" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><input type="text" name="code_melli3_sinora" class="form-control"></td>
+                                <td><input type="text" name="dr_name3_sinora" class="form-control"></td>
+                                <td><input type="text" name="dr_nezam3_sinora" class="form-control"></td>
+                                <td><input type="text" name="dr_special3_sinora" class="form-control"></td>
+                                <td><input type="text" name="desc3_sinora" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><input type="text" name="code_melli4_sinora" class="form-control"></td>
+                                <td><input type="text" name="dr_name4_sinora" class="form-control"></td>
+                                <td><input type="text" name="dr_nezam4_sinora" class="form-control"></td>
+                                <td><input type="text" name="dr_special4_sinora" class="form-control"></td>
+                                <td><input type="text" name="desc4_sinora" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><input type="text" name="code_melli5_sinora" class="form-control"></td>
+                                <td><input type="text" name="dr_name5_sinora" class="form-control"></td>
+                                <td><input type="text" name="dr_nezam5_sinora" class="form-control"></td>
+                                <td><input type="text" name="dr_special5_sinora" class="form-control"></td>
+                                <td><input type="text" name="desc5_sinora" class="form-control"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- End of Question 10-1 -->
+
+
+
+
+                    <!-- Question 10-2 -->
+                    <br />
+                    <br />
+                    <div class="form-group">
+                        <label>2) بررسی نسخ و پرونده بیماران داروی لیراگلوتاید (ویکتوزا) (کد 22666):</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="participation" id="victoza_yes"
+                                value="yes">
+                            <label class="form-check-label" for="victoza_yes">
+                                در بررسی داروی لیراگلوتاید (ویکتوزا)، مورد خاصی مشاهده نگردید.
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="participation" id="victoza_no"
+                                value="no">
+                            <label class="form-check-label" for="victoza_no">
+                                در بررسی داروی لیراگلوتاید (ویکتوزا)، موارد زیر مشاهده گردید:
+                            </label>
+                        </div>
+                    </div>
+
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>ردیف</th>
+                                <th>کد ملی بیمار</th>
+                                <th>نام پزشک</th>
+                                <th>نظام پزشکی</th>
+                                <th>تخصص</th>
+                                <th>توضیحات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td><input type="text" name="code_melli1_victoza" class="form-control"></td>
+                                <td><input type="text" name="dr_name1_victoza" class="form-control"></td>
+                                <td><input type="text" name="dr_nezam1_victoza" class="form-control"></td>
+                                <td><input type="text" name="dr_special1_victoza" class="form-control"></td>
+                                <td><input type="text" name="desc1_victoza" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td><input type="text" name="code_melli2_victoza" class="form-control"></td>
+                                <td><input type="text" name="dr_name2_victoza" class="form-control"></td>
+                                <td><input type="text" name="dr_nezam2_victoza" class="form-control"></td>
+                                <td><input type="text" name="dr_special2_victoza" class="form-control"></td>
+                                <td><input type="text" name="desc2_victoza" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td><input type="text" name="code_melli3_victoza" class="form-control"></td>
+                                <td><input type="text" name="dr_name3_victoza" class="form-control"></td>
+                                <td><input type="text" name="dr_nezam3_victoza" class="form-control"></td>
+                                <td><input type="text" name="dr_special3_victoza" class="form-control"></td>
+                                <td><input type="text" name="desc3_victoza" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td><input type="text" name="code_melli4_victoza" class="form-control"></td>
+                                <td><input type="text" name="dr_name4_victoza" class="form-control"></td>
+                                <td><input type="text" name="dr_nezam4_victoza" class="form-control"></td>
+                                <td><input type="text" name="dr_special4_victoza" class="form-control"></td>
+                                <td><input type="text" name="desc4_victoza" class="form-control"></td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td><input type="text" name="code_melli5_victoza" class="form-control"></td>
+                                <td><input type="text" name="dr_name5_victoza" class="form-control"></td>
+                                <td><input type="text" name="dr_nezam5_victoza" class="form-control"></td>
+                                <td><input type="text" name="dr_special5_victoza" class="form-control"></td>
+                                <td><input type="text" name="desc5_victoza" class="form-control"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- End of Question 10-2 -->
+
+
+
                 </div>
+
                 <!-- todo:... -->
-
-
                 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
                 <div style="border: 10px; padding: 100px; margin: 100px; background-color: orange;">
                     <p>to do...</p>
                 </div>
                 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-
 
 
 
@@ -739,8 +891,6 @@ try {
 
 
 <script>
-
     let jsonString = <?php echo json_encode($jsonString); ?>;
     populateForm(jsonString);
-
 </script>
